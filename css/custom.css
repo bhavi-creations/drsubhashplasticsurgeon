@@ -1,0 +1,15 @@
+.section{
+    background: linear-gradient(45deg,  #ba822c 0%,#ffee9a 43%,#ba822c 100%);
+}
+
+.custom-list-group-item{
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 10px;
+    text-decoration: none !important;
+}
+.custom-list-group-item:hover {
+    text-decoration: none !important;
+    background-color: #f4f4f4 !important;
+}
