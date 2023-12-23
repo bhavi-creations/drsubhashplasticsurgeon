@@ -16975,3 +16975,25 @@ ul.category-list {
 .para{
 font-weight: bold;
 }
+
+
+
+/* Default styles for larger screens */
+#mainSliderWrapper {
+  height: 600px;
+}
+
+/* Styles for medium-sized screens (adjust as needed) */
+@media (max-width: 768px) {
+  #mainSliderWrapper {
+      height: 400px; /* Adjust the height for medium-sized screens */
+  }
+}
+
+/* Styles for small screens (e.g., mobile devices) */
+@media (max-width: 576px) {
+  #mainSliderWrapper {
+      height: 300px; /* Adjust the height for small screens */
+  }
+}
+
