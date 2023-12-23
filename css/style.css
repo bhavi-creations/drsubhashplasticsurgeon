@@ -10791,7 +10791,7 @@ body.noScroll {
   @media (max-width: 575px) {
     #mainSlider,
     #mainSlider .img--holder {
-      height: 175px; } }
+      height: 175px !important; } }
 
 #mainSlider {
   margin-bottom: 30px;
@@ -10811,7 +10811,7 @@ body.noScroll {
     -webkit-transform: translateZ(0) scale(1, 1); }
   #mainSlider .slide .img--holder {
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat; }
   #mainSlider .slide-content {
     height: 100%;
@@ -16980,7 +16980,7 @@ font-weight: bold;
 
 /* Default styles for larger screens */
 #mainSliderWrapper {
-  height: 600px;
+  height: 500px;
 }
 
 /* Styles for medium-sized screens (adjust as needed) */
@@ -16993,7 +16993,7 @@ font-weight: bold;
 /* Styles for small screens (e.g., mobile devices) */
 @media (max-width: 576px) {
   #mainSliderWrapper {
-      height: 300px; /* Adjust the height for small screens */
+      height: 170px; /* Adjust the height for small screens */
   }
 }
 
