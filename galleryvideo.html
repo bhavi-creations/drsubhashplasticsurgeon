@@ -34,6 +34,43 @@
 	<link href="css/custom.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
+
+	<style>
+
+	.embed-responsive {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.embed-responsive::before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: 56.25%; /* 16:9 aspect ratio */
+	}
+
+	.embed-responsive-16by9::before {
+		padding-top: 56.25%; /* 16:9 aspect ratio */
+	}
+
+	.embed-responsive-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
+	</style>
+
 </head>
 
 <body class="shop-page layout-landing">
@@ -159,8 +196,6 @@
 
  <!--  MAIN SECTION -->
 
-
-
  <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
     <div class="container">
         <div class="row d-flex align-items-stretch no-gutters mt-2 mb-4">
@@ -169,14 +204,14 @@
                 <a href="galleryvideo.html" class="btn btn-primary">Videos</a>
             </div>
 
-            <div class="col-md-4 p-2 pt-0 mt-2">
+            <!-- <div class="col-md-4 p-2 pt-0 mt-2">
                 <video class="img-fluid" controls autoplay loop muted>
                     <source src="images/gallery_images/video_1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-            </div>
+            </div> -->
 
-            <div class="col-md-4 p-2 pt-0 mt-2">
+            <!-- <div class="col-md-4 p-2 pt-0 mt-2">
                 <video class="img-fluid" controls autoplay loop muted>
                     <source src="images/gallery_images/video_2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -209,7 +244,130 @@
                     <source src="images/gallery_images/video_6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div> -->
+
+
+
+
+
+
+
+			<!-- youtube video links  -->
+            
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/I0CJfL9735A?si=YGmIwXzgS-MpMSNb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/jTrwRnuldmw?si=f3The4JZAcpm83SK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
             </div>
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/V6sI42dMtbI?si=ylGLfaGcwdkMqpCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+            </div>
+
+
+			  
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/7rUNTxDcz6A?si=QVTxSXJMeKShoKRD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/w3_9zqMq9mU?si=NE3Hj3PRL22_k9No" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+            </div>
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LCJS1Gdgjq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/U96GNQDVZkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H51wRAm8Xyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-9by16">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iWr5Zwy-OeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+            
+			
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g28KJoOp3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			 
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4bp7GzcJQsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nHSHa44YSWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OEZV8p4Spgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/U96GNQDVZkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+			<div class="col-md-4 p-2 pt-0 mt-2">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g28KJoOp3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			
+
+
+
+
+
+			<!-- youtube video links  -->
+
+
         </div>
     </div>
  </section>
@@ -223,6 +381,7 @@
 
 
 <!--footer-->
+
 <div class="footer mt-0  footer-color" >
 	<div class="container">
 		<div class="row py-1 py-md-2 px-lg-0">
@@ -425,6 +584,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- Vendors -->
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
