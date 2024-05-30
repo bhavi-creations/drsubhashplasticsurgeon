@@ -16977,6 +16977,22 @@ font-weight: bold;
 }
 
 
+#testimonialsSection {
+  background-image: url('../images/homepage/get_in_touch.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height:  auto !important;  
+}
+
+
+/* .reviews-photo img {
+  width: 100%;
+  height: auto;
+} */
+
+
 
 /* Default styles for larger screens */
 #mainSliderWrapper {
