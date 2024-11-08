@@ -17013,3 +17013,19 @@ font-weight: bold;
   }
 }
 
+
+.i-auto{
+  padding-top: 5px;
+}
+.brand  a {
+  text-decoration: none;
+ 
+}
+.brand img{
+  width: 30px;
+  height: 30px;
+}
+.Terms a{
+  text-decoration: none;
+ 
+}
