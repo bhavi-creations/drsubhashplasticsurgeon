@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Devarsh Hospitals - Dashboard</title>
+    <title>Dr.P.S Subhash - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -67,66 +67,14 @@
                                             <label for="service" class="form-label text-primary">Select Service:</label>
                                             <select id="service" name="service" class="form-control" required>
                                                 <option value="">Select a Service</option>
-                                                <option value="Abdominoplasty (Tummy tuck)">Abdominoplasty (Tummy tuck)</option>
-                                                <option value="Axillary Fat Removal">Axillary Fat Removal</option>
-                                                <option value="Breast Augmentation">Breast Augmentation</option>
-                                                <option value="Breast Reduction">Breast Reduction</option>
-                                                <option value="Buttock Augmentation">Buttock Augmentation</option>
-                                                <option value="Breast Lift">Breast Lift</option>
-                                                <option value="Chin Implant">Chin Implant</option>
-                                                <option value="Calf Implant">Calf Implant</option>
-                                                <option value="Eyelid Corrections">Eyelid Corrections</option>
-                                                <option value="Ear lobule Repairs">Ear lobule Repairs</option>
-                                                <option value="Ear Piercing">Ear Piercing</option>
-                                                <option value="Face Lift">Face Lift</option>
-                                                <option value="Filler Injections">Filler Injections</option>
-                                                <option value="Gynaecomastia (Male breast)">Gynaecomastia (Male breast)</option>
-                                                <option value="Gender Confirmation Surgery">Gender Confirmation Surgery</option>
-                                                <option value=" Hair Fall (PRP)"> Hair Fall (PRP)</option>
-                                                <option value=" Keloids & Hypertrophic Scars"> Keloids & Hypertrophic Scars</option>
-                                                <option value="Laser Hair Reduction">Laser Hair Reduction</option>
-                                                <option value=" Laser Scan Treatment"> Laser Scan Treatment</option>
-                                                <option value="Laser Vaginoplasty">Laser Vaginoplasty</option>
-                                                <option value="Obesity (Liposuction)	">Obesity (Liposuction)	</option>
-                                                <option value="Lip Corrections">Lip Corrections</option>
-                                                <option value=" Liposuction	"> Liposuction	</option>
-                                                <option value="Nose Job (Rhinoplasty)">Nose Job (Rhinoplasty)</option>
-                                                <option value="Post Bariatric Body Contouring">Post Bariatric Body Contouring</option>
-                                                <option value="Scar Revisions">Scar Revisions</option>
-                                                <option value="Stretch Marks">Stretch Marks</option>
-                                                <option value=" Tattoo Removal"> Tattoo Removal</option>
-                                                <option value="Tissue Expanders	">Tissue Expanders	</option>
-                                                <option value=" Wrinkles (Botox injections)"> Wrinkles (Botox injections)</option>
-                                               
+                                                <option value="Cosmetic Problems">Cosmetic Problems</option>
+                                                <option value="Plastic Reconstructive Problems">Plastic & Reconstructive Problems</option>
+                                              
                                                 
                                             </select>
                                         </div>
 
-                                        <div class="filter-section mb-3">
-                                        <label for="service" class="form-label text-primary">Select Service:</label>
-                                        <select id="service" name="service" class="form-control" required>
-                                        <option value=""></option>
-                                                <option value="AV Fistula">AV Fistula</option>
-                                                <option value="Burns and Post- Burn Sequelae">Burns and Post- Burn Sequelae</option>
-                                                <option value="Crush Injuries">Crush Injuries</option>
-                                                <option value="Chronic Non-healing Ulcers	">Chronic Non-healing Ulcers	</option>
-                                                <option value="Contractures">Contractures</option>
-                                                <option value="Cleft Lip/Palate">Cleft Lip/Palate</option>
-                                                <option value="Congenital Ear Deformities">Congenital Ear Deformities</option>
-                                                <option value="Faciomaxillary Trauma">Faciomaxillary Trauma</option>
-                                                <option value="Free Flaps ( Microvascular Surgery)	">Free Flaps ( Microvascular Surgery)	</option>
-                                                <option value="Hand and Foot Deformities">Hand and Foot Deformities</option>
-                                                <option value="Lymphoedema">Lymphoedema</option>
-                                                <option value="Post Traumatic/ Malignant Defects">Post Traumatic/ Malignant Defects</option>
-                                                <option value="Replantations">Replantations</option>
-                                                <option value="Skin & Soft tissue (Sarcoma) Malignancies">Skin & Soft tissue (Sarcoma) Malignancies</option>
-                                                <option value="Tendon and Nerve Injuries">Tendon and Nerve Injuries</option>
-                                                <option value="Vascular Anomalies">Vascular Anomalies</option>
-                                                <option value="Vaginoplasty">Vaginoplasty</option>
-                                                <option value="Varicose Veins">Varicose Veins</option>
-
-                                        </select>
-                                        </div>
+                                       
                                 
 
 
@@ -282,7 +230,7 @@
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <div class="footer-widget__copyright">
-                                <p class="mini_text" style="color:black"> ©2024 Devarsh Hospitals . All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi Creations</a></p>
+                                <p class="mini_text" style="color:black"> ©2024 Dr.P.S Subhash . All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi Creations</a></p>
                             </div>
                         </div>
                     </div>

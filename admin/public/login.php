@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title> Devarsh Hospitals</title>
+        <title> Dr.P.S Subhash</title>
         <link href="img\Oncology logo.png" rel="icon">
 
         <!-- Custom fonts for this template-->

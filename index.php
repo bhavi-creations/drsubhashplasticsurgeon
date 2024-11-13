@@ -134,7 +134,7 @@
 						<span class="header-social">
 							<a href="https://www.facebook.com/profile.php?id=100076796080517" target="blank"
 								class="hovicon"><i class="fab fa-facebook-f pr-2"></i></a>
-							<a href="https://www.instagram.com/for_beayoutiful_you/" target="blank" class="hovicon"><i
+							<a href="https://www.instagram.com/subhashcenterforplasticsurgery/" target="blank" class="hovicon"><i
 									class="fab fa-instagram pr-2"></i></a>
 							<a href="https://www.youtube.com/@drsubhashplasticsurgeon" target="blank" class="hovicon"><i
 									class="fab fa-youtube"></i></a>
@@ -154,7 +154,7 @@
 						<span class="icon-menu"></span>
 					</button>
 					<div class="col-lg-auto col-lg-2 d-flex align-items-lg-center">
-						<a href="index.html" class="header-logo"><img
+						<a href="index.php" class="header-logo"><img
 								src="images/homepage/logo_best_plastic_surgery_hospitals_in_kakinada.png"
 								alt="Dr.Subhash logo" class="img-fluid"></a>
 					</div>
@@ -164,7 +164,7 @@
 								<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item">
-											<a class="nav-link link-inside" href="index.html">Home</a>
+											<a class="nav-link link-inside" href="index.php">Home</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link link-inside" href="./about.html">About Us</a>
@@ -406,11 +406,11 @@
 					 
 				 
 					<!-- slider -->
-					<!-- <div class="slide">
-						<div class="img--holder" data-bg="images/festivel_sliders/dasara.png" alt="subhas" style="  max-width: 100%;">
+					<div class="slide">
+						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
+							<img class="image-sild" src="images/festivel_sliders/Dr. Subhash Childrens Day website banner.jpg" alt=" happy children days ">
 						</div>
-					</div> -->
-                    
+					</div>
 					 
 					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/micro_needling.png" alt="subhas" style="  max-width: 100%;">
@@ -1138,6 +1138,117 @@
 
 			<!--// Ending  Major services  section -->
 
+			        <section>
+             <div class="container">
+                 <div class="section-title text-center">
+                     <p class="our_blogs my-2">Our Blogs</p>
+                     <h2 class="apporach">Blogs & articles </h2>
+
+
+
+
+                   
+
+                 </div>
+             </div>
+
+             <div class="container">
+                 <div class="row">
+
+                     <?php
+                        include './db.connection/db_connection.php';
+
+                        // Fetch latest 3 blogs with video
+                        $sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            echo "<div class='row'>"; // Start row for card layout
+
+                            while ($row = $result->fetch_assoc()) {
+                                $blog_id = $row['id'];
+                                $title = $row['title'];
+                                $main_content = $row['main_content'];
+                                $main_image = $row['main_image'];
+                                $video = $row['video'];
+
+                                echo "<div class='col-md-4 blogs-border mb-4'>"; // Create 3 equal-width columns for medium devices
+                                echo "<div class='card blogs-border h-100'>"; // Start card
+
+                                // Display the blog title
+                                echo "<div class='card-body'>";
+
+
+                                // Display video if available
+                                if (!empty($video)) {
+                                    $video_path = "./admin/uploads/videos/{$video}";
+                                    echo "<video class='main-video img-fluid' controls>
+                    <source src='{$video_path}' type='video/mp4'>
+                    Your browser does not support the video tag.
+                  </video>";
+                                }
+                                // If no video, display main image
+                                elseif (!empty($main_image)) {
+                                    $main_image_path = "./admin/uploads/photos/{$main_image}";
+                                    echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
+                                }
+                                echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
+                                // Display a short portion of the blog content
+                                echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
+
+                                // Link to full blog post
+                                echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
+
+                                echo "</div>"; // End card body
+                                echo "</div>"; // End card
+                                echo "</div>"; // End column
+                            }
+
+                            echo "</div>"; // End row
+                        } else {
+                            echo "No blog posts found.";
+                        }
+
+                        $conn->close();
+                        ?>
+
+
+
+
+
+
+
+
+
+
+                     <!-- <div class="mt-5 d-none d-md-block">
+                         <a href="blogs.php" style="text-decoration: none;">
+                             <p class="view_more_btn mb-5 d-flex flex-row justify-content-start">View More<i
+                                     class="fa-solid fa-arrow-right mt-1"></i></p>
+                         </a>
+                     </div> -->
+
+                     <div class="d-flex flex-row justify-content-center mt-4">
+                         <a href="blogs.php" style="text-decoration: none;">
+                             <p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
+                         </a>
+                     </div>
+
+                 </div>
+             </div>
+             
+         </section>
+
+
+
+
+
+
+
+
+
+		 
+
 
 			<!-- // Starting  Gallery section -->
 
@@ -1406,7 +1517,7 @@
 										<div class="footer-social d-md-none d-lg-block">
 											<a href="https://www.facebook.com/profile.php?id=100076796080517"
 												target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-											<a href="https://www.instagram.com/for_beayoutiful_you/" target="blank"
+											<a href="https://www.instagram.com/subhashcenterforplasticsurgery/" target="blank"
 												class="hovicon"><i class="icon-instagram"></i></a>
 											<a href="https://www.youtube.com/@drsubhashplasticsurgeon" target="blank"
 												class="hovicon"><i class="fab fa-youtube"></i></a>

@@ -164,7 +164,7 @@ $result = $stmt->get_result();
 						<span class="header-social">
 							<a href="https://www.facebook.com/profile.php?id=100076796080517" target="blank"
 								class="hovicon"><i class="fab fa-facebook-f pr-2"></i></a>
-							<a href="https://www.instagram.com/for_beayoutiful_you/" target="blank" class="hovicon"><i
+							<a href="https://www.instagram.com/subhashcenterforplasticsurgery/" target="blank" class="hovicon"><i
 									class="fab fa-instagram pr-2"></i></a>
 							<a href="https://www.youtube.com/@drsubhashplasticsurgeon" target="blank" class="hovicon"><i
 									class="fab fa-youtube"></i></a>
@@ -184,7 +184,7 @@ $result = $stmt->get_result();
 						<span class="icon-menu"></span>
 					</button>
 					<div class="col-lg-auto col-lg-2 d-flex align-items-lg-center">
-						<a href="index.html" class="header-logo"><img
+						<a href="index.php" class="header-logo"><img
 								src="images/homepage/logo_best_plastic_surgery_hospitals_in_kakinada.png"
 								alt="Dr.Subhash logo" class="img-fluid"></a>
 					</div>
@@ -194,7 +194,7 @@ $result = $stmt->get_result();
 								<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item">
-											<a class="nav-link link-inside" href="index.html">Home</a>
+											<a class="nav-link link-inside" href="index.php">Home</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link link-inside" href="./about.html">About Us</a>
@@ -263,75 +263,15 @@ $result = $stmt->get_result();
     <div class="container">
       <div class="filter_buttons redirect_section mt-4">
         <a href="blogs.php?service="><button class="redirect_blog_srivice">All</button></a>
-        <!-- <a href="blogs.php?service=Abdominoplasty (Tummy tuck)"><button class="redirect_blog_srivice">Abdominoplasty (Tummy tuck)</button></a>
-        <a href="blogs.php?service=Axillary Fat Removal"><button class="redirect_blog_srivice">Axillary Fat Removal</button></a>
-        <a href="blogs.php?service=Breast Augmentation"><button class="redirect_blog_srivice">Breast Augmentation</button></a>
-        <a href="blogs.php?service=Breast Reduction"><button class="redirect_blog_srivice">Breast Reduction</button></a>
-        <a href="blogs.php?service=Breast Lift"><button class="redirect_blog_srivice">Breast Lift</button></a>
-        <a href="blogs.php?service= Buttock Augmentation"><button class="redirect_blog_srivice"> Buttock Augmentation</button></a>
-        <a href="blogs.php?service=Chin Implant"><button class="redirect_blog_srivice">Chin Implant</button></a>
-        <a href="blogs.php?service=Calf Implant"><button class="redirect_blog_srivice">Calf Implant</button></a>
-        <a href="blogs.php?service=Eyelid Corrections"><button class="redirect_blog_srivice">Eyelid Corrections </button></a> -->
-		<a href="blogs.php?service=Abdominoplasty (Tummy tuck)"><button class="redirect_blog_srivice">Abdominoplasty (Tummy tuck)</button></a>
-        <a href="blogs.php?service=Axillary Fat Removal"><button class="redirect_blog_srivice">Axillary Fat Removal</button></a>
-        <a href="blogs.php?service=Breast Augmentation"><button class="redirect_blog_srivice">Breast Augmentation</button></a>
-        <a href="blogs.php?service=Breast Reduction"><button class="redirect_blog_srivice">Breast Reduction</button></a>
-        <a href="blogs.php?service=Breast Lift"><button class="redirect_blog_srivice">Breast Lift</button></a>
-        <a href="blogs.php?service= Buttock Augmentation"><button class="redirect_blog_srivice"> Buttock Augmentation</button></a>
-        <a href="blogs.php?service= Breast Lift"><button class="redirect_blog_srivice"> Breast Lift</button></a>
-		<a href="blogs.php?service=Chin Implant"><button class="redirect_blog_srivice">Chin Implant</button></a>
-
-        <a href="blogs.php?service=Calf Implant"><button class="redirect_blog_srivice">Calf Implant</button></a>
-		<a href="blogs.php?service=Eyelid Corrections"><button class="redirect_blog_srivice">Eyelid Corrections</button></a>
-		<a href="blogs.php?service= Ear lobule Repairs"><button class="redirect_blog_srivice">Ear lobule Repairs</button></a>
-		<a href="blogs.php?service= Ear Piercing"><button class="redirect_blog_srivice"> Ear Piercing</button></a>
-		<a href="blogs.php?service= Face Lift"><button class="redirect_blog_srivice"> Face Lift</button></a>
-		<a href="blogs.php?service= Filler Injections"><button class="redirect_blog_srivice"> Filler Injections</button></a>
-		<a href="blogs.php?service= Gynaecomastia (Male breast)"><button class="redirect_blog_srivice"> Gynaecomastia (Male breast)</button></a>
-		<a href="blogs.php?service= Gender Confirmation Surgery"><button class="redirect_blog_srivice"> Gender Confirmation Surgery</button></a>
-		<a href="blogs.php?service= Hair Fall (PRP)"><button class="redirect_blog_srivice"> Hair Fall (PRP)</button></a>
-		<a href="blogs.php?service= Keloids & Hypertrophic Scars"><button class="redirect_blog_srivice"> Keloids & Hypertrophic Scars</button></a>
-		<a href="blogs.php?service= Laser Hair Reduction"><button class="redirect_blog_srivice"> Laser Hair Reduction</button></a>
-		<a href="blogs.php?service= Laser Scan Treatment"><button class="redirect_blog_srivice"> Laser Scan Treatment</button></a>
-		<a href="blogs.php?service= Laser Vaginoplasty"><button class="redirect_blog_srivice"> Laser Vaginoplasty		</button></a>
-		<a href="blogs.php?service= Obesity (Liposuction)"><button class="redirect_blog_srivice"> Obesity (Liposuction)		</button></a>
-		<a href="blogs.php?service= Lip Corrections"><button class="redirect_blog_srivice"> Lip Corrections</button></a>
-		<a href="blogs.php?service= Liposuction"><button class="redirect_blog_srivice"> Liposuction		</button></a>
-		<a href="blogs.php?service= Nose Job (Rhinoplasty)"><button class="redirect_blog_srivice"> Nose Job (Rhinoplasty)</button></a>
-		<a href="blogs.php?service= Post Bariatric Body Contouring"><button class="redirect_blog_srivice"> Post Bariatric Body Contouring</button></a>
-		<a href="blogs.php?service= Scar Revisions"><button class="redirect_blog_srivice"> Scar Revisions</button></a>
-		<a href="blogs.php?service= Stretch Marks"><button class="redirect_blog_srivice"> Stretch Marks</button></a>
-		<a href="blogs.php?service= Tattoo Removal"><button class="redirect_blog_srivice"> Tattoo Removal</button></a>
-		<a href="blogs.php?service= Tissue Expanders"><button class="redirect_blog_srivice"> Tissue Expanders		</button></a>
-		<a href="blogs.php?service= Wrinkles (Botox injections)"><button class="redirect_blog_srivice"> Wrinkles (Botox injections)</button></a>
-	
+     	<a href="blogs.php?service=Cosmetic Problems"><button class="redirect_blog_srivice">Cosmetic Problems</button></a>
+        <a href="blogs.php?service=Plastic Reconstructive Problems"><button class="redirect_blog_srivice">Plastic & Reconstructive Problems</button></a>
+       
+        
         
 
       </div>
     </div>
-	<div class="container">
-		<div class="filter-button redirect_section mt-4">
-		<a href="blogs.php?service=AV Fistula"><button class="redirect_blog_srivice">AV Fistula</button></a>
-		<a href="blogs.php?service=Burns and Post- Burn Sequelae"><button class="redirect_blog_srivice">Burns and Post- Burn Sequelae</button></a>
-		<a href="blogs.php?service=Crush Injuries"><button class="redirect_blog_srivice">Crush Injuries</button></a>
-		<a href="blogs.php?service=Chronic Non-healing Ulcers"><button class="redirect_blog_srivice">Chronic Non-healing Ulcers		</button></a>
-		<a href="blogs.php?service=Contractures"><button class="redirect_blog_srivice">Contractures</button></a>
-		<a href="blogs.php?service=Cleft Lip/Palate"><button class="redirect_blog_srivice">Cleft Lip/Palate</button></a> 
-		<a href="blogs.php?service=Congenital Ear Deformities"><button class="redirect_blog_srivice">Congenital Ear Deformities</button></a>
-		<a href="blogs.php?service=Faciomaxillary Trauma"><button class="redirect_blog_srivice">Faciomaxillary Trauma</button></a>
-		<a href="blogs.php?service=Free Flaps ( Microvascular Surgery)"><button class="redirect_blog_srivice">Free Flaps ( Microvascular Surgery)		</button></a>
-		<a href="blogs.php?service=Hand and Foot Deformities"><button class="redirect_blog_srivice">Hand and Foot Deformities</button></a>
-		<a href="blogs.php?service=Lymphoedema"><button class="redirect_blog_srivice">Lymphoedema</button></a>
-		<a href="blogs.php?service=Post Traumatic/ Malignant Defects"><button class="redirect_blog_srivice">Post Traumatic/ Malignant Defects</button></a>
-		<a href="blogs.php?service=Replantations"><button class="redirect_blog_srivice">Replantations</button></a>
-		<a href="blogs.php?service=Skin & Soft tissue (Sarcoma) Malignancies"><button class="redirect_blog_srivice">Skin & Soft tissue (Sarcoma) Malignancies</button></a>
-		<a href="blogs.php?service=Tendon and Nerve Injuries"><button class="redirect_blog_srivice">Tendon and Nerve Injuries</button></a>
-		<a href="blogs.php?service=Vascular Anomalies"><button class="redirect_blog_srivice">Vascular Anomalies</button></a>
-		<a href="blogs.php?service=Vaginoplasty"><button class="redirect_blog_srivice">Vaginoplasty</button></a>
-		<a href="blogs.php?service=Varicose Veins"><button class="redirect_blog_srivice">Varicose Veins</button></a>
-
-		</div>
-	</div>
+	 
 
 
 	
@@ -459,7 +399,7 @@ $conn->close();
 										<div class="footer-social d-md-none d-lg-block">
 											<a href="https://www.facebook.com/profile.php?id=100076796080517"
 												target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-											<a href="https://www.instagram.com/for_beayoutiful_you/" target="blank"
+											<a href="https://www.instagram.com/subhashcenterforplasticsurgery/" target="blank"
 												class="hovicon"><i class="icon-instagram"></i></a>
 											<a href="https://www.youtube.com/@drsubhashplasticsurgeon" target="blank"
 												class="hovicon"><i class="fab fa-youtube"></i></a>
