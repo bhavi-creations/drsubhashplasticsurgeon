@@ -1172,7 +1172,7 @@
                                 $main_image = $row['main_image'];
                                 $video = $row['video'];
 
-                                echo "<div class='col-md-4 blogs-border mb-4'>"; // Create 3 equal-width columns for medium devices
+                                echo "<div class='col-md-4 c mb-4'  >"; // Create 3 equal-width columns for medium devices
                                 echo "<div class='card blogs-border h-100'>"; // Start card
 
                                 // Display the blog title

@@ -17176,3 +17176,13 @@ font-weight: bold;
   margin-top: -10px;
   margin-bottom: 50px;
 }
+
+
+
+.blogs_border{
+  border: none;
+  padding: 20px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+ 
