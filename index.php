@@ -408,7 +408,7 @@
 					<!-- slider -->
 					<div class="slide">
 						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
-							<img class="image-sild" src="images/festivel_sliders/drsubash newyear.png" alt=" newyear ">
+							<img class="image-sild" src="images/festivel_sliders/drsubash_newyear.png" alt="newyear ">
 						</div>
 					</div>
 					 
