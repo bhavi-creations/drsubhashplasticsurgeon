@@ -404,12 +404,12 @@
 					data-slick='{"arrows": false, "dots": true}'>
 
 
-					 <div class="slide">
+					<!-- <div class="slide">
 						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
 							<img class="image-sild" src="images/festivel_sliders/subhash_slider_vinayaka_chavithi.jpg" alt="newyear ">
 						</div>
 					</div>
-					<!--<div class="slide">
+					<div class="slide">
 						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
 							<img class="image-sild" src="images/festivel_sliders/sree_krishna_janmashtami.jpg" alt="newyear ">
 						</div>
