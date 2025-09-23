@@ -66,46 +66,14 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PETP0PPDPG"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'G-PETP0PPDPG');
 	</script>
-
-	<!-- <style>
-	 
-
-	 
-	@media only screen and (max-width: 767px) {
-		.page-content {
-			width: auto  ;
-
-		}
-
-		#mainSliderWrapper {
-			height: 190px !important; 
-		}
-
-		.slide {
-			height: 190px !important;  
-		}
-	}
-
-	/* Medium Screen Styles */
-	@media only screen and (min-width: 768px) and (max-width: 991px) {
-		.page-content {
-			 width: auto !important;
-		}
-
-		#mainSliderWrapper {
-			height: 400px;  
-		}
-
-		.slide {
-			height: 400px;  
-		}
-	}
-</style> -->
 
 
 </head>
@@ -189,10 +157,10 @@
 										<a class="nav-link link-inside" href="https://rinasolutions.in/doctors/kakinada/doctor-details.php?tid=17" target="_blank"  class="btn btn-xs btn-gradient">Book Appointment</a>
 									</li>
 										<li> -->
-											<a href="https://rinasolutions.in/doctors/kakinada/doctor-details.php?tid=17"
-												target="_blank"
-												class="btn btn-xs btn-gradient pb-1 pt-1 "></i><span>Book
-													Appointment</span></i></a>
+										<a href="https://rinasolutions.in/doctors/kakinada/doctor-details.php?tid=17"
+											target="_blank"
+											class="btn btn-xs btn-gradient pb-1 pt-1 "></i><span>Book
+												Appointment</span></i></a>
 										</li>
 									</ul>
 								</div>
@@ -216,186 +184,7 @@
 	<div class="page-content">
 		<!--section slider-->
 		<div class="section mt-0">
-			<!-- <div class="quickLinks-wrap js-quickLinks-wrap-d d-none d-lg-flex">
-			<div class="quickLinks js-quickLinks closed">
-				<div class="container">
-					<div class="row no-gutters">
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-placeholder"></i><span>Location</span></a>
-							<div class="link-drop p-0">
-								<div id="googleMapDrop" class="google-map"></div>
-							</div>
-						</div>
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-clock"></i><span>Working Time</span>
-							</a>
-							<div class="link-drop">
-								<h5 class="link-drop-title"><i class="icon-clock"></i>Working Time</h5>
-								<table class="row-table">
-									<tr>
-										<td><i>Mon-Thu</i></td>
-										<td>08:00 - 20:00</td>
-									</tr>
-									<tr>
-										<td><i>Friday</i></td>
-										<td> 07:00 - 22:00</td>
-									</tr>
-									<tr>
-										<td><i>Saturday</i></td>
-										<td>08:00 - 18:00</td>
-									</tr>
-									<tr>
-										<td><i>Sunday</i></td>
-										<td>Closed</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-pencil-writing"></i><span>Request Form</span>
-							</a>
-							<div class="link-drop">
-								<h5 class="link-drop-title"><i class="icon-pencil-writing"></i>Request Form</h5>
-								<form id="requestForm" method="post" novalidate>
-									<div class="successform">
-										<p>Your message was sent successfully!</p>
-									</div>
-									<div class="errorform">
-										<p>Something went wrong, try refreshing and submitting the form again.</p>
-									</div>
-									<div class="input-group">
-											<span>
-											<i class="icon-user"></i>
-										</span>
-										<input name="requestname" type="text" class="form-control" placeholder="Your Name"/>
-									</div>
-									<div class="row row-sm-space mt-1">
-										<div class="col">
-											<div class="input-group">
-													<span>
-													<i class="icon-email2"></i>
-												</span>
-												<input name="requestemail" type="text" class="form-control" placeholder="Your Email"/>
-											</div>
-										</div>
-										<div class="col">
-											<div class="input-group">
-													<span>
-													<i class="icon-smartphone"></i>
-												</span>
-												<input name="requestphone" type="text" class="form-control" placeholder="Your Phone"/>
-											</div>
-										</div>
-									</div>
-									<div class="selectWrapper input-group mt-1">
-											<span>
-											<i class="icon-tooth"></i>
-										</span>
-										<select name="requestservice" class="form-control">
-											<option selected="selected" disabled="disabled">Select Service</option>
-											<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-											<option value="General Dentistry">General Dentistry</option>
-											<option value="Orthodontics">Orthodontics</option>
-											<option value="Children`s Dentistry">Children`s Dentistry</option>
-											<option value="Dental Implants">Dental Implants</option>
-											<option value="Dental Emergency">Dental Emergency</option>
-										</select>
-									</div>
-									<div class="row row-sm-space mt-1">
-										<div class="col-sm-6">
-											<div class="input-group flex-nowrap">
-													<span>
-														<i class="icon-calendar2"></i>
-													</span>
-												<div class="datepicker-wrap">
-													<input name="requestdate" type="text" class="form-control datetimepicker" placeholder="Date" readonly>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 mt-1 mt-sm-0">
-											<div class="input-group flex-nowrap">
-													<span>
-															<i class="icon-clock"></i>
-													</span>
-												<div class="datepicker-wrap">
-													<input name="requesttime" type="text" class="form-control timepicker" placeholder="Time" readonly>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="text-right mt-2">
-										<button type="submit" class="btn btn-sm btn-hover-fill">Request</button>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-calendar"></i><span>Doctors Timetable</span>
-							</a>
-							<div class="link-drop">
-								<h5 class="link-drop-title"><i class="icon-calendar"></i>Doctors Timetable</h5>
-								<p>This simply works as a guide and helps you to connect with dentists of your choice. Please confirm the doctor’s availability before leaving your premises.</p>
-								<p class="text-right"><a href="#portfolioSection" class="btn btn-sm btn-hover-fill link-inside">Details</a></p>
-							</div>
-						</div>
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-price-tag"></i><span>Calculator</span>
-							</a>
-							<div class="link-drop">
-								<h5 class="link-drop-title"><i class="icon-price-tag"></i>Quick Pricing</h5>
-								<table class="row-table">
-									<tr>
-										<td>Initial Consultation</td>
-										<td>$10</td>
-									</tr>
-									<tr>
-										<td>Dental check-up</td>
-										<td>$15</td>
-									</tr>
-									<tr>
-										<td>Routine Exam (no xrays)</td>
-										<td>$50</td>
-									</tr>
-									<tr>
-										<td>Simple Removal of a tooth</td>
-										<td>$122</td>
-									</tr>
-									<tr>
-										<td>Teeth cleaning</td>
-										<td>$50 - $75</td>
-									</tr>
-									<tr>
-										<td>X-ray image</td>
-										<td>$10</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-						<div class="col">
-							<a href="#" class="link">
-								<i class="icon-emergency-call"></i><span>Emergency Case</span></a>
-							<div class="link-drop">
-								<h5 class="link-drop-title"><i class="icon-emergency-call"></i>Emergency Case</h5>
-								<p>Emergency dental care may be needed if you have had a blow to the face, lost a filling, or cracked a tooth. </p>
-								<ul class="icn-list">
-									<li><i class="icon-telephone"></i><span class="phone">1-800-267-0000<br>1-800-267-0001</span>
-									</li>
-									<li><i class="icon-black-envelope"></i><a href="mailto:info@besthotel-email.com">info@besthotel-email.com</a></li>
-								</ul>
-								<p class="text-right mt-2"><a href="#contactForm" class="btn btn-sm btn-hover-fill link-inside">Our Contacts</a></p>
-							</div>
-						</div>	
-						<div class="col col-close"><a href="#" class="js-quickLinks-close"><i class="icon-top" data-toggle="tooltip" data-placement="top" title="Close panel"></i></a></div>
-					</div>
-				</div>
-				<div class="quickLinks-open js-quickLinks-open"><span data-toggle="tooltip" data-placement="left" title="Open panel">+</span></div>
-			</div>
-		</div> -->
+
 			<div id="mainSliderWrapper" class="d-sm-none  d-md-block  d-lg-block">
 				<div class="loading-content">
 					<div class="inner-circles-loader"></div>
@@ -404,17 +193,7 @@
 					data-slick='{"arrows": false, "dots": true}'>
 
 
-					 <div class="slide">
-						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
-							<img class="image-sild" src="images/festivel_sliders/subhash _slider_dussehra.jpg" alt="newyear ">
-						</div>
-					</div>
-				<!--	<div class="slide">
-						<div class="img--holder" alt="subhas"  style="  max-width: 100%; height:auto;">
-							<img class="image-sild" src="images/festivel_sliders/sree_krishna_janmashtami.jpg" alt="newyear ">
-						</div>
-					</div>
-					  -->
+
 					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/micro_needling.png" alt="subhas" style="  max-width: 100%;">
 						</div>
@@ -423,13 +202,12 @@
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- We Provide -->
-											<!-- <br><b>Full Medical Care!</b> -->
+
 											<br><b>Micro Needling</b>
 
 										</div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											<!-- Highest standards of customer service -->
+
 										</div>
 										<div class="slide-btn"><a href="services.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
@@ -443,7 +221,7 @@
 					</div>
 
 					<!-- slider -->
-                    
+
 					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/prp.png" alt="subhas" style="  max-width: 100%;">
 						</div>
@@ -452,12 +230,12 @@
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- We Provide -->
-											 
+
+
 											<br><b>PRP Treatment</b>
 										</div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											<!-- Highest standards of customer service -->
+
 										</div>
 										<div class="slide-btn"><a href="Hair-Fall-(PRP).html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
@@ -471,7 +249,7 @@
 					</div>
 
 					<!-- slider -->
-                    
+
 					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/tattoo_removal.png" alt="subhas" style="  max-width: 100%;">
 						</div>
@@ -479,12 +257,12 @@
 							<div class="vert-wrap container">
 								<div class="vert">
 									<div class="container cont1">
-										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s"> 
-											<!-- We	Provide -->
+										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
+
 											<br><b>Tattoo Removal</b>
 										</div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											<!-- Highest standards of customer service -->
+
 										</div>
 										<div class="slide-btn"><a href="Tattoo-Removal.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
@@ -506,12 +284,12 @@
 							<div class="vert-wrap container">
 								<div class="vert">
 									<div class="container cont1">
-										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s"> 
-											<!-- We	Provide -->
+										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
+
 											<br><b>Facial Hair Removal<br> For Women</b>
 										</div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											<!-- Highest standards of customer service -->
+
 										</div>
 										<div class="slide-btn"><a href="Laser-Hair-Reduction.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
@@ -523,22 +301,21 @@
 							</div>
 						</div>
 					</div>
-                      
+
 					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/lip_filters.png" alt="subhas" style="  max-width: 100%;">
-						 
+
 						</div>
 						<div class="slide-content center">
 							<div class="vert-wrap container">
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- We
-											Provide -->
+
 											<br><b>Lip Fillers</b>
 										</div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											<!-- Highest standards of customer service -->
+
 										</div>
 										<div class="slide-btn"><a href="Lip-Corrections.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
@@ -553,7 +330,7 @@
 
 
 
-				 <div class="slide">
+					<div class="slide">
 						<div class="img--holder" data-bg="images/sliders/carbon_peel_laser.png" alt="subuu" style=" max-width: 100%;"
 							class="img-fluid"></div>
 						<div class="slide-content center">
@@ -561,13 +338,11 @@
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- We
-											Provide -->
+
 											<br>
 											<b>Carbon Peel Laser</b>
 										</div>
-										<!-- <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											Your good health is our greatest achievement</div> -->
+
 										<div class="slide-btn"><a href="services.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
 													class="icon-right-arrow"></i><span>know more</span><i
@@ -586,11 +361,10 @@
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- Quality Healthcare. -->
+
 											<br><b>Liquid Rhyinoplasty</b>
 										</div>
-										<!-- <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											Highest standards of customer service</div> -->
+
 										<div class="slide-btn"><a href="services.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
 													class="icon-right-arrow"></i><span>Know more</span><i
@@ -610,12 +384,10 @@
 								<div class="vert">
 									<div class="container cont1">
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
-											<!-- We
-											Provide -->
+
 											<br><b>Sagging Arms </b>
 										</div>
-										<!-- <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">
-											Highest standards of customer service</div> -->
+
 										<div class="slide-btn"><a href="services.html" class="btn link-inside"
 												data-animation="fadeInUp" data-animation-delay="2s"><i
 													class="icon-right-arrow"></i><span>Know more</span><i
@@ -625,7 +397,7 @@
 								</div>
 							</div>
 						</div>
-					</div>  
+					</div>
 
 				</div>
 			</div>
@@ -634,114 +406,22 @@
 
 
 		<div class="page-content">
-			<!--section slider-->
-			<!-- <div class="section mt-0">	 
-			<div id="mainSliderWrapper " class="" style="height: 600px;">
-				<div class="loading-content">
-					<div class="inner-circles-loader"></div>
-				</div>
-				<div class="main-slider mb-0 arrows-white arrows-bottom" id="mainSlider" data-slick='{"arrows": false, "dots": true}'>
-					<div class="slide">
-						<div class="img--holder" data-bg="images/subh" alt="subuu" style="height: 600px; max-width: 100%;"  class="img-fluid"></div>
-						<div class="slide-content center">
-							<div class="vert-wrap container">
-								<div class="vert">
-									<div class="container cont1">
-										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">We Provide<br>
-											<b>Verve Hipro-V Lifting  Machinery</b></div>
-										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Your good health is our greatest achievement</div>
-										<div class="slide-btn"><a href="machenary.html" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>know more</span><i class="icon-right-arrow"></i></a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="img--holder" data-bg=" images/content/plast1.webp" alt="subhas" style="height: 600px;  max-width: 100%;"  class="img-fluid"></div>
-						<div class="slide-content center">
-							<div class="vert-wrap container">
-								<div class="vert">
-									<div class="container cont1">
-										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Quality Healthcare.
-											<br><b>Accessible to Everyone.</b></div>
-										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Highest standards of customer service</div>
-										<div class="slide-btn"><a href="services.html" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Explore our services</span><i class="icon-right-arrow"></i></a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="img--holder" data-bg="images/content/cosmo1.webp" alt="subhas" style="height: 600px;  max-width: 100%;" ></div>
-						<div class="slide-content center">
-							<div class="vert-wrap container">
-								<div class="vert">
-									<div class="container cont1">
-										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">We Provide
-											<br><b>Full Medical Care!</b></div>
-										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Highest standards of customer service</div>
-										<div class="slide-btn"><a href="services.html" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>
-									
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-			<!--//section slider-->
-			<!--section-->
-			<!-- <div class="section mt-0 shadow-bot pt-2 pb-0 py-sm-4">
-				<div class="container">
-					<div class="row js-icn-text-alt-carousel">
-						<div class="col-md-6 col-lg-4">
-							<div class="icn-text-alt">
-								<div class="icn-text-alt-icn"><i class="icon-first-aid-kit"></i></div>
-								<div>
-									<h4 class="icn-text-alt-title">24 Hour Emergency</h4>
-									<p>Open round the clock for convenience, quick and easy access</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4">
-							<div class="icn-text-alt">
-								<div class="icn-text-alt-icn"><i class="icon-flask"></i></div>
-								<div>
-									<h4 class="icn-text-alt-title">Complete Lab Services</h4>
-									<p>Cost-efficient, comprehensive and clinical laboratory services</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4">
-							<div class="icn-text-alt">
-								<div class="icn-text-alt-icn"><i class="icon-doctor"></i></div>
-								<div>
-									<h4 class="icn-text-alt-title">Medical Professionals</h4>
-									<p>Qualified and certified physicians for quality medical care</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			<!--//section-->
-			<!--section about-->
 
-             <!--//section about-->
+
+
 
 			<div class="section" id="aboutSection" style="margin: 0px; padding: 10px 0px !important;">
 				<div class="container pt-lg-1">
-                
+
 					<div class="title-wrap text-center mt-2">
-						<!-- <h2 class="h1">One stop for all Surgery Needs</h2> -->
-						
+
+
 						<h2 class="h1">One stop for all Your cosmetic Needs</h2>
-						 
+
 						<div class="h-decor"></div>
 					</div>
 					<p>Dr. Subhash Center for Plastic Surgery is established in the heart of Kakinada smart city with an idea to deliver exceptional care and treatment to the patients through a range of plastic, cosmetic and reconstructive surgeries. With expertise in the specialty of problem solving we are dedicated in improving patient's quality of life and addressing a wide range of problems (from new born to elderly.. from hair to toe..) The best possible results for patient's aesthetic needs will be provided. With the help of software patients can have an overview of the post operative results at the time of consultation. Consultations are provided in a safe, hygienic, well equipped place located in bhanugudi center, beside padma priya theatre, Kakinada</p>
-				
+
 					<div class="title-wrap text-center mt-4">
 						<h2 class="h1">Know about Doctors</h2>
 						<div class="h-decor mb-2"></div>
@@ -859,7 +539,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-sm-12 col-md-6">
 							<img src="images/homepage/Why_choose_us.png"
-							alt="banner-callus" class="mb-2 img-fluid" >
+								alt="banner-callus" class="mb-2 img-fluid">
 						</div>
 						<div class="col-lg-6 col-sm-12 col-md-6">
 							<div class="title-wrap">
@@ -881,14 +561,14 @@
 									We have flexible hours and are open on certain evenings and during the weekend, to
 									accommodate your schedule.
 								</li>
-							</ul>	 
+							</ul>
 
 						</div>
 					</div>
 				</div>
 			</section>
 
-			 <hr>
+			<hr>
 
 			<!-- //  Ending   Get in touch section -->
 
@@ -1119,7 +799,7 @@
 			<!--section services-->
 
 			<hr>
-            
+
 			<!-- // Starting   Major services  section -->
 
 			<!-- <div class="section" id="gallerySection" style="margin: 0px; padding: 40px 0px !important;">
@@ -1141,81 +821,79 @@
 
 			<!--// Ending  Major services  section -->
 
-			        <section>
-             <div class="container">
-                 <div class="section-title text-center">
-                     <p class="our_blogs my-2">Our Blogs</p>
-                     <h2 class="apporach">Blogs & articles </h2>
+			<section>
+				<div class="container">
+					<div class="section-title text-center">
+						<p class="our_blogs my-2">Our Blogs</p>
+						<h2 class="apporach">Blogs & articles </h2>
 
 
 
 
-                   
-
-                 </div>
-             </div>
-
-             <div class="container">
-                 <div class="row">
-
-                     <?php
-                        include './db.connection/db_connection.php';
-
-                        // Fetch latest 3 blogs with video
-                        $sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            echo "<div class='row'>"; // Start row for card layout
-
-                            while ($row = $result->fetch_assoc()) {
-                                $blog_id = $row['id'];
-                                $title = $row['title'];
-                                $main_content = $row['main_content'];
-                                $main_image = $row['main_image'];
-                                $video = $row['video'];
-
-                                echo "<div class='col-md-4 c mb-4'  >"; // Create 3 equal-width columns for medium devices
-                                echo "<div class='card blogs-border h-100'>"; // Start card
-
-                                // Display the blog title
-                                echo "<div class='card-body'>";
 
 
-                                // Display video if available
-                                if (!empty($video)) {
-                                    $video_path = "./admin/uploads/videos/{$video}";
-                                    echo "<video class='main-video img-fluid' controls>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row">
+
+						<?php
+						include './db.connection/db_connection.php';
+
+						// Fetch latest 3 blogs with video
+						$sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+							echo "<div class='row'>"; // Start row for card layout
+
+							while ($row = $result->fetch_assoc()) {
+								$blog_id = $row['id'];
+								$title = $row['title'];
+								$main_content = $row['main_content'];
+								$main_image = $row['main_image'];
+								$video = $row['video'];
+
+								echo "<div class='col-md-4 c mb-4'  >"; // Create 3 equal-width columns for medium devices
+								echo "<div class='card blogs-border h-100'>"; // Start card
+
+								// Display the blog title
+								echo "<div class='card-body'>";
+
+
+								// Display video if available
+								if (!empty($video)) {
+									$video_path = "./admin/uploads/videos/{$video}";
+									echo "<video class='main-video img-fluid' controls>
                     <source src='{$video_path}' type='video/mp4'>
                     Your browser does not support the video tag.
                   </video>";
-                                }
-                                // If no video, display main image
-                                elseif (!empty($main_image)) {
-                                    $main_image_path = "./admin/uploads/photos/{$main_image}";
-                                    echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
-                                }
-                                echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
-                                // Display a short portion of the blog content
-                                echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
+								}
+								// If no video, display main image
+								elseif (!empty($main_image)) {
+									$main_image_path = "./admin/uploads/photos/{$main_image}";
+									echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
+								}
+								echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
+								// Display a short portion of the blog content
+								echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
 
-                                // Link to full blog post
-                                echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
+								// Link to full blog post
+								echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
 
-                                echo "</div>"; // End card body
-                                echo "</div>"; // End card
-                                echo "</div>"; // End column
-                            }
+								echo "</div>"; // End card body
+								echo "</div>"; // End card
+								echo "</div>"; // End column
+							}
 
-                            echo "</div>"; // End row
-                        } else {
-                            echo "No blog posts found.";
-                        }
+							echo "</div>"; // End row
+						} else {
+							echo "No blog posts found.";
+						}
 
-                        $conn->close();
-                        ?>
-
-
+						$conn->close();
+						?>
 
 
 
@@ -1224,25 +902,25 @@
 
 
 
-                     <!-- <div class="mt-5 d-none d-md-block">
+
+
+						<!-- <div class="mt-5 d-none d-md-block">
                          <a href="blogs.php" style="text-decoration: none;">
                              <p class="view_more_btn mb-5 d-flex flex-row justify-content-start">View More<i
                                      class="fa-solid fa-arrow-right mt-1"></i></p>
                          </a>
                      </div> -->
 
-                     <div class="d-flex flex-row justify-content-center mt-4">
-                         <a href="blogs.php" style="text-decoration: none;">
-                             <p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
-                         </a>
-                     </div>
+						<div class="d-flex flex-row justify-content-center mt-4">
+							<a href="blogs.php" style="text-decoration: none;">
+								<p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
+							</a>
+						</div>
 
-                 </div>
-             </div>
-             
-         </section>
+					</div>
+				</div>
 
-
+			</section>
 
 
 
@@ -1250,7 +928,9 @@
 
 
 
-		 
+
+
+
 
 
 			<!-- // Starting  Gallery section -->
@@ -1267,7 +947,7 @@
 							<div class="doctor-box doctor-box-style2 text-center">
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_key_hole_surgery_for_gynaecomastia.png" class="img-fluid" alt="">
-								</div>	 
+								</div>
 							</div>
 						</div>
 
@@ -1276,7 +956,7 @@
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_Rhinoplasty_ in_kakinada.png" class="img-fluid" alt="">
 								</div>
-								 
+
 							</div>
 						</div>
 
@@ -1285,7 +965,7 @@
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_cleft_palate_repair_in_kakinada.png" class="img-fluid" alt="">
 								</div>
-								 
+
 							</div>
 						</div>
 
@@ -1294,7 +974,7 @@
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_filarial_leg_treatment.png" class="img-fluid" alt="">
 								</div>
-								 
+
 							</div>
 						</div>
 
@@ -1303,7 +983,7 @@
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_burns_treatment.png" class="img-fluid" alt="">
 								</div>
-								 
+
 							</div>
 						</div>
 
@@ -1312,7 +992,7 @@
 								<div class="doctor-box-photo">
 									<img src="images/gallery_images/best_body_liposuction.png" class="img-fluid" alt="">
 								</div>
-								 
+
 							</div>
 						</div>
 
@@ -1327,7 +1007,7 @@
 							</a>
 						</div>
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -1364,7 +1044,7 @@
 						</div>
 
 					</div>
-				</div> 
+				</div>
 
 
 
@@ -1434,60 +1114,60 @@
 					</div>
 				</div>
 			</div> -->
-            
 
 
-             <!-- // Starting  Get in touch section -->
 
-			 <section>
+			<!-- // Starting  Get in touch section -->
+
+			<section>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-sm-12 col-md-6">
 							<img src="images/homepage/get_in_touch.png"
-							alt="banner-callus" class="mb-2 img-fluid" >
+								alt="banner-callus" class="mb-2 img-fluid">
 						</div>
 						<div class="col-lg-6 col-sm-12 col-md-6">
-								<div class="pt-lg-4">
-									<h2 data-title=""><span> <br class="d-lg-none"> <span
-												class="theme-color"></span></span></h2>
-									<h2>Get In Touch</h2>
-									<p>We believe in providing the best possible care to all our existing patients and
-										welcome new patients to sample.</p>
-									<form class="contact-form" id="contactForm" method="post" novalidate="novalidate">
-										<div class="successform">
-											<p>Your message was sent successfully!</p>
-										</div>
-										<div class="errorform">
-											<p>Something went wrong, try refreshing and submitting the form again.</p>
-										</div>
-										<div>
-											<input type="text" class="form-control" name="name"
-												placeholder="Your name*">
-										</div>
-										<div class="row row-sm-space mt-15">
-											<div class="col-sm-6"><input type="text" class="form-control" name="phone"
-													placeholder="Your Phone"></div>
-											<div class="col-sm-6 mt-15 mt-sm-0"><input type="text" class="form-control"
-													name="email" placeholder="Email*"></div>
-										</div>
-										<div class="mt-15">
-											<textarea class="form-control" name="message"
-												placeholder="Message"></textarea>
-										</div>
-										<div class="mt-2 mt-lg-4 text-center text-md-left">
-											<button type="submit" class="btn"><i class="icon-right-arrow"></i><span>Send
-													request</span><i class="icon-right-arrow"></i></button>
-										</div>
-									</form>
-								</div>
+							<div class="pt-lg-4">
+								<h2 data-title=""><span> <br class="d-lg-none"> <span
+											class="theme-color"></span></span></h2>
+								<h2>Get In Touch</h2>
+								<p>We believe in providing the best possible care to all our existing patients and
+									welcome new patients to sample.</p>
+								<form class="contact-form" id="contactForm" method="post" novalidate="novalidate">
+									<div class="successform">
+										<p>Your message was sent successfully!</p>
+									</div>
+									<div class="errorform">
+										<p>Something went wrong, try refreshing and submitting the form again.</p>
+									</div>
+									<div>
+										<input type="text" class="form-control" name="name"
+											placeholder="Your name*">
+									</div>
+									<div class="row row-sm-space mt-15">
+										<div class="col-sm-6"><input type="text" class="form-control" name="phone"
+												placeholder="Your Phone"></div>
+										<div class="col-sm-6 mt-15 mt-sm-0"><input type="text" class="form-control"
+												name="email" placeholder="Email*"></div>
+									</div>
+									<div class="mt-15">
+										<textarea class="form-control" name="message"
+											placeholder="Message"></textarea>
+									</div>
+									<div class="mt-2 mt-lg-4 text-center text-md-left">
+										<button type="submit" class="btn"><i class="icon-right-arrow"></i><span>Send
+												request</span><i class="icon-right-arrow"></i></button>
+									</div>
+								</form>
+							</div>
 
 						</div>
 					</div>
 				</div>
-			 </section>
+			</section>
 
-			 <!-- //  Ending   Get in touch section -->
-			 <hr>
+			<!-- //  Ending   Get in touch section -->
+			<hr>
 
 
 			<!-- // footer-->
@@ -1554,31 +1234,31 @@
 								</li>
 								<li>
 									<i class="icon-telephone"></i><b>
-									<span class="phone">
-										<span class="text-nowrap">
-										<a href="tel:9989802260">9989802260</a>
-										</span>,
-									 	
-										<span  class="text-nowrap">
-									   <a href="tel:8885111587">8885111587</a>
-									   </span>
-									</span></b>			 
-										
+										<span class="phone">
+											<span class="text-nowrap">
+												<a href="tel:9989802260">9989802260</a>
+											</span>,
+
+											<span class="text-nowrap">
+												<a href="tel:8885111587">8885111587</a>
+											</span>
+										</span></b>
+
 								</li>
-                                 
+
 
 								<li>
 									<i class="icon-black-envelope"></i><a
 										href="mailto:drsubhashplasticsurgeon@gmail.com">drsubhashplasticsurgeon@gmail.com</a>
 								</li>
-								
-									<i class="fa-solid fa-hospital"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class=" d-sm-inline ">For emergency
-										cases&nbsp;&nbsp;&nbsp;
-								<span  class="text-nowrap">
-									<i class="icon-telephone"></i><b>
-									<a href="tel:9010236663">9010236663</a>
+
+								<i class="fa-solid fa-hospital"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class=" d-sm-inline ">For emergency
+									cases&nbsp;&nbsp;&nbsp;
+									<span class="text-nowrap">
+										<i class="icon-telephone"></i><b>
+											<a href="tel:9010236663">9010236663</a>
 									</span>
-								 </span></b>	
+								</span></b>
 
 							</ul>
 
@@ -1587,231 +1267,230 @@
 
 
 
-							
+
 						</div>
 					</div>
 				</div>
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row text-center text-md-left ">
-							<div class="col-sm Terms"> <a href="terms.html"> Terms & conditions </a>  <a href="privacy.html">   Privacy & policy </a></div>
+							<div class="col-sm Terms"> <a href="terms.html"> Terms & conditions </a> <a href="privacy.html"> Privacy & policy </a></div>
 							<div class="col-sm-auto ml-auto brand"><a
-								href="https://bhavicreations.com/">Branded By @<img src="images\homepage\bhavi.png "alt="drsubhashplasticsurgeon "  > </a>  
-					</div>
-				</div>
-
-			<!-- // footer-->
-
-			<div class="backToTop js-backToTop">
-				<i class="icon icon-up-arrow"></i>
-			</div>
-			<div class="modal modal-form modal-form-sm fade" id="modalQuestionForm">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<button aria-label='Close' class='close' data-dismiss='modal'>
-							<i class="icon-error"></i>
-						</button>
-						<div class="modal-body">
-							<div class="modal-form">
-								<h3>Ask a Question</h3>
-								<form class="mt-15" id="questionForm" method="post" novalidate>
-									<div class="successform">
-										<p>Your message was sent successfully!</p>
-									</div>
-									<div class="errorform">
-										<p>Something went wrong, try refreshing and submitting the form again.</p>
-									</div>
-									<div class="input-group">
-										<span>
-											<i class="icon-user"></i>
-										</span>
-										<input type="text" name="name" class="form-control" autocomplete="off"
-											placeholder="Your Name*" />
-									</div>
-									<div class="input-group">
-										<span>
-											<i class="icon-email2"></i>
-										</span>
-										<input type="text" name="email" class="form-control" autocomplete="off"
-											placeholder="Your Email*" />
-									</div>
-									<div class="input-group">
-										<span>
-											<i class="icon-smartphone"></i>
-										</span>
-										<input type="text" name="phone" class="form-control" autocomplete="off"
-											placeholder="Your Phone" />
-									</div>
-									<textarea name="message" class="form-control"
-										placeholder="Your comment*"></textarea>
-									<div class="text-right mt-2">
-										<button type="submit" class="btn btn-sm btn-hover-fill">Ask Now</button>
-									</div>
-								</form>
+									href="https://bhavicreations.com/">Branded By @<img src="images\homepage\bhavi.png " alt="drsubhashplasticsurgeon "> </a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal modal-form fade" id="modalBookingForm">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<button aria-label='Close' class='close' data-dismiss='modal'>
-							<i class="icon-error"></i>
-						</button>
-						<div class="modal-body">
-							<div class="modal-form">
-								<h3>Book an Appointment</h3>
-								<form class="mt-15" id="bookingForm" method="post" novalidate>
-									<div class="successform">
-										<p>Your message was sent successfully!</p>
-									</div>
-									<div class="errorform">
-										<p>Something went wrong, try refreshing and submitting the form again.</p>
-									</div>
-									<div class="input-group">
-										<span>
-											<i class="icon-user"></i>
-										</span>
-										<input type="text" name="bookingname" class="form-control" autocomplete="off"
-											placeholder="Your Name*" />
-									</div>
-									<div class="row row-xs-space mt-1">
-										<div class="col-sm-6">
-											<div class="input-group">
-												<span>
-													<i class="icon-email2"></i>
-												</span>
-												<input type="text" name="bookingemail" class="form-control"
-													autocomplete="off" placeholder="Your Email*" />
-											</div>
-										</div>
-										<div class="col-sm-6 mt-1 mt-sm-0">
-											<div class="input-group">
-												<span>
-													<i class="icon-smartphone"></i>
-												</span>
-												<input type="text" name="bookingphone" class="form-control"
-													autocomplete="off" placeholder="Your Phone" />
-											</div>
-										</div>
-									</div>
-									<div class="row row-xs-space mt-1">
-										<div class="col-sm-6">
-											<div class="input-group">
-												<span>
-													<i class="icon-birthday"></i>
-												</span>
-												<input type="text" name="bookingage" class="form-control"
-													autocomplete="off" placeholder="Your age" />
-											</div>
+
+						<!-- // footer-->
+
+						<div class="backToTop js-backToTop">
+							<i class="icon icon-up-arrow"></i>
+						</div>
+						<div class="modal modal-form modal-form-sm fade" id="modalQuestionForm">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button aria-label='Close' class='close' data-dismiss='modal'>
+										<i class="icon-error"></i>
+									</button>
+									<div class="modal-body">
+										<div class="modal-form">
+											<h3>Ask a Question</h3>
+											<form class="mt-15" id="questionForm" method="post" novalidate>
+												<div class="successform">
+													<p>Your message was sent successfully!</p>
+												</div>
+												<div class="errorform">
+													<p>Something went wrong, try refreshing and submitting the form again.</p>
+												</div>
+												<div class="input-group">
+													<span>
+														<i class="icon-user"></i>
+													</span>
+													<input type="text" name="name" class="form-control" autocomplete="off"
+														placeholder="Your Name*" />
+												</div>
+												<div class="input-group">
+													<span>
+														<i class="icon-email2"></i>
+													</span>
+													<input type="text" name="email" class="form-control" autocomplete="off"
+														placeholder="Your Email*" />
+												</div>
+												<div class="input-group">
+													<span>
+														<i class="icon-smartphone"></i>
+													</span>
+													<input type="text" name="phone" class="form-control" autocomplete="off"
+														placeholder="Your Phone" />
+												</div>
+												<textarea name="message" class="form-control"
+													placeholder="Your comment*"></textarea>
+												<div class="text-right mt-2">
+													<button type="submit" class="btn btn-sm btn-hover-fill">Ask Now</button>
+												</div>
+											</form>
 										</div>
 									</div>
-									<div class="selectWrapper input-group mt-1">
-										<span>
-											<i class="icon-tooth"></i>
-										</span>
-										<select name="bookingservice" class="form-control">
-											<option selected="selected" disabled="disabled">Select Service</option>
-											<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-											<option value="General Dentistry">General Dentistry</option>
-											<option value="Orthodontics">Orthodontics</option>
-											<option value="Children`s Dentistry">Children`s Dentistry</option>
-											<option value="Dental Implants">Dental Implants</option>
-											<option value="Dental Emergency">Dental Emergency</option>
-										</select>
-									</div>
-									<div class="input-group flex-nowrap mt-1">
-										<span>
-											<i class="icon-calendar2"></i>
-										</span>
-										<div class="datepicker-wrap">
-											<input name="bookingdate" type="text" class="form-control datetimepicker"
-												placeholder="Date" readonly>
-										</div>
-									</div>
-									<div class="input-group flex-nowrap mt-1">
-										<span>
-											<i class="icon-clock"></i>
-										</span>
-										<div class="datepicker-wrap">
-											<input name="bookingtime" type="text" class="form-control timepicker"
-												placeholder="Time">
-										</div>
-									</div>
-									<textarea name="bookingmessage" class="form-control"
-										placeholder="Your comment"></textarea>
-									<div class="text-right mt-2">
-										<button type="submit" class="btn btn-sm btn-hover-fill">Book now</button>
-									</div>
-								</form>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+						<div class="modal modal-form fade" id="modalBookingForm">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button aria-label='Close' class='close' data-dismiss='modal'>
+										<i class="icon-error"></i>
+									</button>
+									<div class="modal-body">
+										<div class="modal-form">
+											<h3>Book an Appointment</h3>
+											<form class="mt-15" id="bookingForm" method="post" novalidate>
+												<div class="successform">
+													<p>Your message was sent successfully!</p>
+												</div>
+												<div class="errorform">
+													<p>Something went wrong, try refreshing and submitting the form again.</p>
+												</div>
+												<div class="input-group">
+													<span>
+														<i class="icon-user"></i>
+													</span>
+													<input type="text" name="bookingname" class="form-control" autocomplete="off"
+														placeholder="Your Name*" />
+												</div>
+												<div class="row row-xs-space mt-1">
+													<div class="col-sm-6">
+														<div class="input-group">
+															<span>
+																<i class="icon-email2"></i>
+															</span>
+															<input type="text" name="bookingemail" class="form-control"
+																autocomplete="off" placeholder="Your Email*" />
+														</div>
+													</div>
+													<div class="col-sm-6 mt-1 mt-sm-0">
+														<div class="input-group">
+															<span>
+																<i class="icon-smartphone"></i>
+															</span>
+															<input type="text" name="bookingphone" class="form-control"
+																autocomplete="off" placeholder="Your Phone" />
+														</div>
+													</div>
+												</div>
+												<div class="row row-xs-space mt-1">
+													<div class="col-sm-6">
+														<div class="input-group">
+															<span>
+																<i class="icon-birthday"></i>
+															</span>
+															<input type="text" name="bookingage" class="form-control"
+																autocomplete="off" placeholder="Your age" />
+														</div>
+													</div>
+												</div>
+												<div class="selectWrapper input-group mt-1">
+													<span>
+														<i class="icon-tooth"></i>
+													</span>
+													<select name="bookingservice" class="form-control">
+														<option selected="selected" disabled="disabled">Select Service</option>
+														<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+														<option value="General Dentistry">General Dentistry</option>
+														<option value="Orthodontics">Orthodontics</option>
+														<option value="Children`s Dentistry">Children`s Dentistry</option>
+														<option value="Dental Implants">Dental Implants</option>
+														<option value="Dental Emergency">Dental Emergency</option>
+													</select>
+												</div>
+												<div class="input-group flex-nowrap mt-1">
+													<span>
+														<i class="icon-calendar2"></i>
+													</span>
+													<div class="datepicker-wrap">
+														<input name="bookingdate" type="text" class="form-control datetimepicker"
+															placeholder="Date" readonly>
+													</div>
+												</div>
+												<div class="input-group flex-nowrap mt-1">
+													<span>
+														<i class="icon-clock"></i>
+													</span>
+													<div class="datepicker-wrap">
+														<input name="bookingtime" type="text" class="form-control timepicker"
+															placeholder="Time">
+													</div>
+												</div>
+												<textarea name="bookingmessage" class="form-control"
+													placeholder="Your comment"></textarea>
+												<div class="text-right mt-2">
+													<button type="submit" class="btn btn-sm btn-hover-fill">Book now</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-			<script>
-				var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?78665';
-				var s = document.createElement('script');
-				s.type = 'text/javascript';
-				s.async = true;
-				s.src = url;
-				var options = {
-					"enabled": true,
-					"chatButtonSetting": {
-						"backgroundColor": "#4dc247",
-						"ctaText": "",
-						"borderRadius": "25",
-						"marginLeft": "0",
-						"marginBottom": "120",
-						"marginRight": "50",
-						"position": "right"
-					},
-					"brandSetting": {
-						"brandName": "WhatsApp",
-						"brandSubTitle": "Typically replies within a day",
-						"brandImg": "https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
-						"welcomeText": "Hi welcome.! Dr.Subhash plasticSurgeon\nHow can we help you?",
-						"messageText": "",
-						"backgroundColor": "#0a5f54",
-						"ctaText": "Start Chat",
-						"borderRadius": "50",
-						"autoShow": false,
-						"phoneNumber": "919989802260"
-					}
-				};
-				s.onload = function () {
-					CreateWhatsappChatWidget(options);
-				};
-				var x = document.getElementsByTagName('script')[0];
-				x.parentNode.insertBefore(s, x);
-			</script>
+						<script>
+							var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?78665';
+							var s = document.createElement('script');
+							s.type = 'text/javascript';
+							s.async = true;
+							s.src = url;
+							var options = {
+								"enabled": true,
+								"chatButtonSetting": {
+									"backgroundColor": "#4dc247",
+									"ctaText": "",
+									"borderRadius": "25",
+									"marginLeft": "0",
+									"marginBottom": "120",
+									"marginRight": "50",
+									"position": "right"
+								},
+								"brandSetting": {
+									"brandName": "WhatsApp",
+									"brandSubTitle": "Typically replies within a day",
+									"brandImg": "https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+									"welcomeText": "Hi welcome.! Dr.Subhash plasticSurgeon\nHow can we help you?",
+									"messageText": "",
+									"backgroundColor": "#0a5f54",
+									"ctaText": "Start Chat",
+									"borderRadius": "50",
+									"autoShow": false,
+									"phoneNumber": "919989802260"
+								}
+							};
+							s.onload = function() {
+								CreateWhatsappChatWidget(options);
+							};
+							var x = document.getElementsByTagName('script')[0];
+							x.parentNode.insertBefore(s, x);
+						</script>
 
-			<!-- Vendors -->
-			<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-			<script src="vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
-			<script src="vendor/cookie/jquery.cookie.js"></script>
-			<script src="vendor/bootstrap-datetimepicker/moment.js"></script>
-			<script src="vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-			<script src="vendor/popper/popper.min.js"></script>
-			<script src="vendor/bootstrap/bootstrap.min.js"></script>
-			<script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-			<script src="vendor/waypoints/sticky.min.js"></script>
-			<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-			<script src="vendor/slick/slick.min.js"></script>
-			<script src="vendor/scroll-with-ease/jquery.scroll-with-ease.min.js"></script>
-			<script src="vendor/countTo/jquery.countTo.js"></script>
-			<script src="vendor/form-validation/jquery.form.js"></script>
-			<script src="vendor/form-validation/jquery.validate.min.js"></script>
-			<script src="vendor/isotope/isotope.pkgd.min.js"></script>
-			<!-- Custom Scripts -->
-			<script src="js/app.js"></script>
-			<script src="color/color.js"></script>
-			<script src="js/app-shop.js"></script>
-			<script src="form/forms.js"></script>
+						<!-- Vendors -->
+						<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+						<script src="vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
+						<script src="vendor/cookie/jquery.cookie.js"></script>
+						<script src="vendor/bootstrap-datetimepicker/moment.js"></script>
+						<script src="vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+						<script src="vendor/popper/popper.min.js"></script>
+						<script src="vendor/bootstrap/bootstrap.min.js"></script>
+						<script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+						<script src="vendor/waypoints/sticky.min.js"></script>
+						<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+						<script src="vendor/slick/slick.min.js"></script>
+						<script src="vendor/scroll-with-ease/jquery.scroll-with-ease.min.js"></script>
+						<script src="vendor/countTo/jquery.countTo.js"></script>
+						<script src="vendor/form-validation/jquery.form.js"></script>
+						<script src="vendor/form-validation/jquery.validate.min.js"></script>
+						<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+						<!-- Custom Scripts -->
+						<script src="js/app.js"></script>
+						<script src="color/color.js"></script>
+						<script src="js/app-shop.js"></script>
+						<script src="form/forms.js"></script>
 
 </body>
 
 </html>
- 
