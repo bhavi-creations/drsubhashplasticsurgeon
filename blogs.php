@@ -140,7 +140,15 @@ $result = $stmt->get_result();
 		}
 	}
 </style> -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3T2MSF4JW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-X3T2MSF4JW');
+</script>
 
 </head>
 
