@@ -1,34 +1,52 @@
 <?php
-include './db.connection/db_connection.php'; // Include your database connection file
 
-// Retrieve service filter from GET request
-$service = isset($_GET['service']) ? $_GET['service'] : '';
+include_once __DIR__ . '/db.connection/db_connection.php';
 
-// Prepare SQL query with optional service filter
-$sql = "SELECT id, title, main_content, main_image, created_at FROM blogs";
-if (!empty($service)) {
-	$sql .= " WHERE service = ?";
+// Retrieve optional service filter.
+$service = trim($_GET['service'] ?? '');
+
+$stmt = null;
+$result = null;
+$query_error = null;
+$db_unavailable = false;
+
+// Never call prepare() unless $conn is a valid mysqli connection.
+if ($conn instanceof mysqli && !$conn->connect_errno) {
+
+	$sql = "SELECT id, title, main_content, main_image, created_at FROM blogs";
+
+	if ($service !== '') {
+		$sql .= " WHERE service = ?";
+	}
+
+	$sql .= " ORDER BY created_at DESC";
+
+	$stmt = $conn->prepare($sql);
+
+	if ($stmt) {
+
+		if ($service !== '') {
+			$stmt->bind_param("s", $service);
+		}
+
+		if ($stmt->execute()) {
+			$result = $stmt->get_result();
+		} else {
+			$query_error = $stmt->error;
+		}
+
+	} else {
+		$query_error = $conn->error;
+	}
+
+} else {
+	$db_unavailable = true;
 }
-$sql .= " ORDER BY created_at DESC";
 
-// Initialize statement
-$stmt = $conn->prepare($sql);
-
-// Bind parameters if service is set
-if (!empty($service)) {
-	$stmt->bind_param("s", $service);
-}
-
-// Execute the statement
-$stmt->execute();
-
-// Get the result
-$result = $stmt->get_result();
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -268,7 +286,7 @@ $result = $stmt->get_result();
 			});
 		});
 	</script>
-	</header>
+	
 
 	<main>
 		<!-- Filter Buttons -->
@@ -295,27 +313,74 @@ $result = $stmt->get_result();
 				<div class="col-lg-12">
 					<div class="grid row">
 						<?php
-						if ($result->num_rows > 0) {
+						if ($db_unavailable) {
+
+							echo "
+								<div class='col-12 text-center py-5'>
+									<h4>Blogs are temporarily unavailable.</h4>
+									<p>Please try again after the database service is running.</p>
+								</div>
+							";
+
+						} elseif (!empty($query_error)) {
+
+							echo "
+								<div class='col-12 text-center py-5'>
+									<h4>Unable to load blogs right now.</h4>
+									<p>Please try again later.</p>
+								</div>
+							";
+
+						} elseif ($result && $result->num_rows > 0) {
+
 							while ($row = $result->fetch_assoc()) {
-								$image_path = !empty($row['main_image']) ? "admin/uploads/photos/{$row['main_image']}" : "default_image.png";
+
+								$blogId      = (int) $row['id'];
+								$blogTitle   = htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8');
+								$cleanText   = strip_tags($row['main_content']);
+								$shortText   = htmlspecialchars(substr($cleanText, 0, 90), ENT_QUOTES, 'UTF-8');
+
+								if (!empty($row['main_image'])) {
+									$imageName = basename($row['main_image']);
+									$imagePath = "admin/uploads/photos/" . rawurlencode($imageName);
+								} else {
+									$imagePath = "default_image.png";
+								}
+
 								echo "
-                                    <div class='grid-item blogs_border col-sm-12 col-lg-4 mb-5'>
-                                        <div class='post-box card_bg_div_box'>
-                                            <figure>
-                                                <a href='fullblog.php?id={$row['id']}'>
-                                                    <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image'>
-                                                </a>
-                                            </figure>
-                                            <div class='box-content'>
-                                                <h5 class='box-title'><a  class='box-title' href='fullblog.php?id={$row['id']}'>" . htmlspecialchars($row['title']) . "</a></h5>
-                                                <p class='post-desc  mt-5' style='text-align: justify;'>" . substr(strip_tags($row['main_content']), 0, 90) . "...</p>
-                                                <a href='fullblog.php?id={$row['id']}'><button class='blog_main_btn'>Read More..</button></a>
-                                            </div>
-                                        </div>
-                                    </div>";
+									<div class='grid-item blogs_border col-sm-12 col-lg-4 mb-5'>
+										<div class='post-box card_bg_div_box'>
+											<figure>
+												<a href='fullblog.php?id={$blogId}'>
+													<img src='{$imagePath}' alt='{$blogTitle}' class='img-fluid blog_box_image'>
+												</a>
+											</figure>
+
+											<div class='box-content'>
+												<h5 class='box-title'>
+													<a class='box-title' href='fullblog.php?id={$blogId}'>{$blogTitle}</a>
+												</h5>
+
+												<p class='post-desc mt-5' style='text-align: justify;'>
+													{$shortText}...
+												</p>
+
+												<a href='fullblog.php?id={$blogId}'>
+													<button class='blog_main_btn'>Read More..</button>
+												</a>
+											</div>
+										</div>
+									</div>
+								";
 							}
+
 						} else {
-							echo "<p>No blog posts found.</p>";
+
+							echo "
+								<div class='col-12 text-center py-5'>
+									<p>No blog posts found.</p>
+								</div>
+							";
 						}
 						?>
 					</div>
@@ -323,36 +388,159 @@ $result = $stmt->get_result();
 			</div>
 		</div>
 	</main>
-
-
-
-
-
 	<!-- ======= Footer ======= -->
+	<div class="footer mt-0 footer-color">
+		<div class="container">
+			<div class="row py-1 py-md-2 px-lg-0">
 
+				<div class="col-lg-4 footer-col1">
+					<div class="row flex-column flex-md-row flex-lg-column">
+						<div class="col-md col-lg-auto">
 
+							<div class="footer-logo">
+								<img src="images/footer-logo.webp"
+									alt="Dr. Subhash"
+									class="img-fluid w-50"
+									style="color: #fff;">
+							</div>
 
+							<div class="mt-2 mt-lg-0"></div>
 
+							<div class="col-md">
+								<div class="footer-text mt-1 mt-lg-2">
+									<p>
+										M.B.B.S., M.S., M.Ch (Plastic Surgery)<br>
+										Fellowship in Microsurgery (Tata Medical Center)<br>
+										PLASTIC, COSMETIC AND RECONSTRUCTIVE SURGEON
+									</p>
+								</div>
 
+								<div class="footer-social d-md-none d-lg-block">
+									<a href="https://www.facebook.com/profile.php?id=100076796080517"
+										target="_blank" class="hovicon">
+										<i class="icon-facebook-logo"></i>
+									</a>
 
+									<a href="https://www.instagram.com/subhashcenterforplasticsurgery/"
+										target="_blank" class="hovicon">
+										<i class="icon-instagram"></i>
+									</a>
 
-	<script>
-		let currentSlide = 0;
+									<a href="https://www.youtube.com/@drsubhashplasticsurgeon"
+										target="_blank" class="hovicon">
+										<i class="fab fa-youtube"></i>
+									</a>
+								</div>
+							</div>
 
-		function moveSlide(step) {
-			const slides = document.querySelectorAll('.carousel .slide');
-			const totalSlides = slides.length;
-			currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-			document.querySelector('.carousel').style.transform = `translateX(-${currentSlide * 100}%)`;
-		}
-	</script>
+						</div>
+					</div>
+				</div>
 
+				<div class="col-sm-12 col-lg-4">
+					<h3>Follow us</h3>
+					<div class="h-decor"></div>
 
+					<button>
+						<a href="https://www.crisalix.com/en/directory/dr-subhash-pentapati"
+							target="_blank">
+
+							<img src="https://www.crisalix.com/assets/logo/logo-643e060d8bca5d9effb26d7336cb227c217ca65a3691d22a6074718e747b4de8.svg"
+								alt="Crisalix">
+
+							<h3>Book a 3D Crisalix Consultation</h3>
+						</a>
+					</button>
+				</div>
+
+				<div class="col-sm-12 col-lg-4">
+					<h3>Our Contact</h3>
+					<div class="h-decor"></div>
+
+					<ul class="icn-list">
+
+						<li>
+							<i class="icon-placeholder2"></i>
+							3rd Floor, Near Subbayya Hotel, Kondayya palem Bridge Road,
+							Ramarao peta, Kakinada
+							<br>
+
+							<a href="https://maps.google.com/maps/dir//Dr.+Subhash+Center+for+Plastic+Surgery+Bhanugudi+Jct+Bhanugudi+Junction,+G+O+Colony+Kakinada,+Andhra+Pradesh+533003/@16.9699253,82.237915,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3a3829428214b965:0x9d9d08ec0cfc0a45"
+								target="_blank"
+								class="btn btn-xs btn-gradient">
+
+								<i class="icon-placeholder2"></i>
+								<span>Get directions on the map</span>
+								<i class="icon-right-arrow"></i>
+							</a>
+						</li>
+
+						<li>
+							<i class="icon-telephone"></i>
+							<b>
+								<span class="phone">
+									<span class="text-nowrap">
+										<a href="tel:9989802260">9989802260</a>
+									</span>,
+									<span class="text-nowrap">
+										<a href="tel:8885111587">8885111587</a>
+									</span>
+								</span>
+							</b>
+						</li>
+
+						<li>
+							<i class="icon-black-envelope"></i>
+							<a href="mailto:drsubhashplasticsurgeon@gmail.com">
+								drsubhashplasticsurgeon@gmail.com
+							</a>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-hospital"></i>
+							<span class="d-sm-inline">
+								For emergency cases
+								<span class="text-nowrap">
+									<i class="icon-telephone"></i>
+									<b>
+										<a href="tel:9010236663">9010236663</a>
+									</b>
+								</span>
+							</span>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row text-center text-md-left">
+
+					<div class="col-sm Terms">
+						<a href="terms.html">Terms &amp; conditions</a>
+						<a href="privacy.html">Privacy &amp; policy</a>
+					</div>
+
+					<div class="col-sm-auto ml-auto brand">
+						<a href="https://bhavicreations.com/">
+							Branded By @
+							<img src="images/homepage/bhavi.png"
+								alt="drsubhashplasticsurgeon">
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ======= End Footer ======= -->
 
 	<div id="preloader"></div>
-	<!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
-	<!-- Vendor JS Files -->
+	<!-- Existing vendor scripts -->
 	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 	<script src="assets/vendor/aos/aos.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -360,133 +548,21 @@ $result = $stmt->get_result();
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="assets/vendor/php-email-form/validate.js"></script>
 
-	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 
-
-	<!-- Swiper JS -->
 	<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
-
-	<!-- JavaScript -->
-	<!--Uncomment this line-->
 	<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
 
+	<?php
+	// Close database resources safely.
+	if ($stmt instanceof mysqli_stmt) {
+		$stmt->close();
+	}
+
+	if ($conn instanceof mysqli) {
+		$conn->close();
+	}
+	?>
 
 </body>
-
 </html>
-
-
-<?php
-// Close the statement and connection
-$stmt->close();
-$conn->close();
-?>
-
-<div class="footer mt-0  footer-color">
-	<div class="container">
-		<div class="row py-1 py-md-2 px-lg-0">
-			<div class="col-lg-4 footer-col1">
-				<div class="row flex-column flex-md-row flex-lg-column">
-					<div class="col-md col-lg-auto">
-						<div class="footer-logo">
-							<img src="images/footer-logo.webp" alt="footer-logo" class="img-fluid w-50"
-								style="color: #fff;" alt="Subhash">
-						</div>
-						<div class="mt-2 mt-lg-0"></div>
-						<div class="footer-social d-none d-md-block d-lg-none">
-
-
-						</div>
-
-						<div class="col-md">
-							<div class="footer-text mt-1 mt-lg-2">
-								<p>
-									M.B.B.S., M.S., M.Ch (Plastic Surgery)<br>
-									Fellowship in Microsurgery (Tata Medical Center)<br>
-									PLASTIC, COSMETIC AND RECONSTRUCTIVE SURGEON
-								</p>
-							</div>
-
-							<div class="footer-social d-md-none d-lg-block">
-								<a href="https://www.facebook.com/profile.php?id=100076796080517"
-									target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-								<a href="https://www.instagram.com/subhashcenterforplasticsurgery/" target="blank"
-									class="hovicon"><i class="icon-instagram"></i></a>
-								<a href="https://www.youtube.com/@drsubhashplasticsurgeon" target="blank"
-									class="hovicon"><i class="fab fa-youtube"></i></a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12 col-lg-4">
-				<h3>Follow us</h3>
-				<div class="h-decor"></div>
-				<button><a href="https://www.crisalix.com/en/directory/dr-subhash-pentapati"
-						target="_blank"><img
-							src="https://www.crisalix.com/assets/logo/logo-643e060d8bca5d9effb26d7336cb227c217ca65a3691d22a6074718e747b4de8.svg">
-						<h3>Book a 3D Crisalix Consultation</h3>
-					</a></button>
-
-			</div>
-			<div class="col-sm-12 col-lg-4">
-				<h3>Our Contact</h3>
-				<div class="h-decor"></div>
-				<ul class="icn-list">
-					<li><i class="icon-placeholder2"></i>
-						3rd Floor, Near Subbayya Hotel, Kondayya palem Bridge Road, Ramarao peta, Kakinada
-						<br>
-						<a href="https://maps.google.com/maps/dir//Dr.+Subhash+Center+for+Plastic+Surgery+Bhanugudi+Jct+Bhanugudi+Junction,+G+O+Colony+Kakinada,+Andhra+Pradesh+533003/@16.9699253,82.237915,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3a3829428214b965:0x9d9d08ec0cfc0a45"
-							target="_blank" class="btn btn-xs btn-gradient"><i
-								class="icon-placeholder2"></i><span>Get directions on the map</span><i
-								class="icon-right-arrow"></i></a>
-					</li>
-					<li>
-						<i class="icon-telephone"></i><b>
-							<span class="phone">
-								<span class="text-nowrap">
-									<a href="tel:9989802260">9989802260</a>
-								</span>,
-
-								<span class="text-nowrap">
-									<a href="tel:8885111587">8885111587</a>
-								</span>
-							</span></b>
-
-					</li>
-
-
-					<li>
-						<i class="icon-black-envelope"></i><a
-							href="mailto:drsubhashplasticsurgeon@gmail.com">drsubhashplasticsurgeon@gmail.com</a>
-					</li>
-
-					<i class="fa-solid fa-hospital"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class=" d-sm-inline ">For emergency
-						cases&nbsp;&nbsp;&nbsp;
-						<span class="text-nowrap">
-							<i class="icon-telephone"></i><b>
-								<a href="tel:9010236663">9010236663</a>
-						</span>
-					</span></b>
-
-				</ul>
-
-
-
-
-
-
-
-			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<div class="container">
-			<div class="row text-center text-md-left ">
-				<div class="col-sm Terms"> <a href="terms.html"> Terms & conditions </a> <a href="privacy.html"> Privacy & policy </a></div>
-				<div class="col-sm-auto ml-auto brand"><a
-						href="https://bhavicreations.com/">Branded By @<img src="images\homepage\bhavi.png " alt="drsubhashplasticsurgeon "> </a>
-				</div>
-			</div>

@@ -1052,12 +1052,12 @@ His academic training and specialized fellowship have provided a strong foundati
 						</div>
 					</div>
 
-<div style="text-align: left; margin-top: 20px;">
+<!-- <div style="text-align: left; margin-top: 20px;">
     <a href="about.html" class="btn"
        style="background: transparent; border: none; box-shadow: none; padding-left: 0; color: inherit; font-weight: 700; font-size:16px">
         Know More About Dr. Subhash →
     </a>
-</div>
+</div> -->
 					<div class="title-wrap text-center mt-4 mb-3">
 						<h2 class="h1">Cosmetic Gynecology & Aesthetic Treatments</h2>
 						<!-- <div class="h-decor"></div> -->
@@ -1240,12 +1240,12 @@ His academic training and specialized fellowship have provided a strong foundati
 			<div class="section" id="servicesSection" style="margin: 0px; padding: 40px 0px !important;">
 				<div class="container">
 					<div class="title-wrap text-center">
-						<h2 class="h1">Our Services</h2>
+						<h2 class="h1">Plastic, Cosmetic & Reconstructive Surgery Services</h2>
 						<div class="h-decor"></div>
 					</div>
 
 					<!-- Cosmetic Problems -->
-					<h5 class="service-card-name text-center mb-3">Cosmetic Problems</h5>
+					<h5 class="service-card-name text-center mb-3">Cosmetic & Aesthetic Procedures</h5>
 					<div class="row">
 						<div class="col-md-6 col-lg-4">
 							<div class="m-10">
@@ -1257,10 +1257,12 @@ His academic training and specialized fellowship have provided a strong foundati
 							<ul class="marker-list-md ">
 								<!-- Cosmetic Problems List -->
 								<a href="./abdominoplasty.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Abdominoplasty (Tummy tuck)</li>
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Rhinoplasty</li>
+									<!-- <li data-aos="zoom-out" class="aos-animate">&nbsp;Abdominoplasty (Tummy tuck)</li> -->
 								</a><br />
 								<a href="./Axillary-Fat-Removal.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Axillary Fat Removal</li>
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Gynecomastia Surgery</li>
+									<!-- <li data-aos="zoom-out" class="aos-animate">&nbsp;Axillary Fat Removal</li> -->
 								</a><br />
 								<a href="./Breast-Augmentation.html">
 									<li data-aos="zoom-out" class="aos-animate">&nbsp;Breast Augmentation</li>
@@ -1268,35 +1270,35 @@ His academic training and specialized fellowship have provided a strong foundati
 								<a href="./Breast-Reduction.html">
 									<li data-aos="zoom-out" class="aos-animate">&nbsp;Breast Reduction</li>
 								</a><br />
-								<a href="./Breast-Lift.html">
+								<!-- <a href="./Breast-Lift.html">
 									<li data-aos="zoom-out" class="aos-animate">&nbsp;Breast Lift</li>
-								</a><br />
+								</a><br /> -->
 							</ul>
 						</div>
 						<div class="col-md-3 col-lg-4">
 							<ul class="marker-list-md ">
 								<!-- Cosmetic Problems List (Continued) -->
 								<a href="./Hair-Fall-(PRP).html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Hair Fall (PRP)</li>
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Hair Restoration</li>
 								</a><br />
-								<a href="./Keloids_&_Hypertrophic-Scars.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Keloids &amp; Hypertrophic Scars
+								 <a href="./Keloids_&_Hypertrophic-Scars.html">
+									<li data-aos="zoom-out" class="aos-animate">&nbsp; Liposuction
 									</li>
 								</a><br />
-								<a href="./Laser-Hair-Reduction.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Laser Hair Reduction</li>
+								<a href="./Breast-Lift.html">
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Breast Lift</li>
 								</a><br />
-								<a href="./Laser-Scar-Treatment.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Laser Scan Treatment</li>
-								</a><br />
+								<!-- <a href="./Laser-Scar-Treatment.html">
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Liposuction</li>
+								</a><br /> -->
 								<a href="./Laser-Vaginoplasty.html">
-									<li data-aos="zoom-out" class="aos-animate">&nbsp;Laser Vaginoplasty</li>
+									<li data-aos="zoom-out" class="aos-animate">&nbsp;Abdominoplasty</li>
 								</a><br />
 							</ul>
 							<div class="slide-btn">
 								<a href="services.html" class="btn link-inside btn-cont" data-animation="fadeInUp"
 									data-animation-delay="2s">
-									<i class="icon-right-arrow"></i><span>Know more</span><i
+									<i class="icon-right-arrow"></i><span>Explore Cosmetic Procedures</span><i
 										class="icon-right-arrow"></i>
 								</a>
 							</div>
@@ -1304,7 +1306,7 @@ His academic training and specialized fellowship have provided a strong foundati
 					</div>
 
 					<!-- Plastic & Reconstructive Problems -->
-					<h5 class="service-card-name text-center mt-5 mb-3">Plastic & Reconstructive Problems</h5>
+					<h5 class="service-card-name text-center mt-5 mb-3">Reconstructive & Plastic Surgery</h5>
 					<div class="row">
 						<div class="col-md-6 col-lg-4">
 							<img src="./images/homepage/Plastic&Reconstructive_Problems_plastic_surgeon_in_kakinada.png"
@@ -1314,52 +1316,52 @@ His academic training and specialized fellowship have provided a strong foundati
 							<ul class="marker-list-md ">
 								<!-- Reconstructive Problems List -->
 								<a href="./AV-Fistual.html">
-									<li data-aos="zoom-out" class="aos-init">AV Fistula</li>
+									<li data-aos="zoom-out" class="aos-init">Burn Reconstruction</li>
 								</a><br />
 								<a href="./Burns-and-post-Burn-Sequelae.html">
-									<li data-aos="zoom-out" class="aos-init">Burns and Post- Burn Sequelae</li>
+									<li data-aos="zoom-out" class="aos-init"> Hand & Trauma Reconstruction </li>
 								</a><br />
 								<a href="./Crush-Injuries.html">
-									<li data-aos="zoom-out" class="aos-init">Crush Injuries</li>
+									<li data-aos="zoom-out" class="aos-init">Cleft Lip & Palate</li>
 								</a><br />
 								<a href="./Chronic_Non-healing_Ulcers.html">
-									<li data-aos="zoom-out" class="aos-init">Chronic Non-healing Ulcers</li>
+									<li data-aos="zoom-out" class="aos-init">Chronic Wound Reconstruction</li>
 								</a><br />
-								<a href="./Contractures.html">
+								<!-- <a href="./Contractures.html">
 									<li data-aos="zoom-out" class="aos-init">Contractures</li>
 								</a><br />
 								<a href="./cleft-lip-and-palate.html">
 									<li data-aos="zoom-out" class="aos-init">Cleft Lip/Palate</li>
-								</a><br />
+								</a><br /> -->
 							</ul>
 						</div>
 						<div class="col-md-3 col-lg-4">
 							<ul class="marker-list-md ">
 								<!-- Reconstructive Problems List (Continued) -->
 								<a href="./Hand-and-Foot-Deformities.html">
-									<li data-aos="zoom-out" class="aos-init">Hand and Foot Deformities</li>
+									<li data-aos="zoom-out" class="aos-init">Scar & Contracture Reconstruction</li>
 								</a><br />
 								<a href="./Lymphoedema.html">
-									<li data-aos="zoom-out" class="aos-init">Lymphoedema</li>
+									<li data-aos="zoom-out" class="aos-init"> Nerve & Tendon Reconstruction</li>
 								</a><br />
 								<a href="./Post-TraumaticMalignant-Defects.html">
-									<li data-aos="zoom-out" class="aos-init">Post Traumatic/ Malignant Defects</li>
+									<li data-aos="zoom-out" class="aos-init"> Microsurgical Reconstruction</li>
 								</a><br />
 								<a href="./Replantations.html">
 									<li data-aos="zoom-out" class="aos-init">Replantations</li>
 								</a><br />
-								<a href="./Skin_&_Soft-tissue(Sarcoma)-Malignancies.html">
+								<!-- <a href="./Skin_&_Soft-tissue(Sarcoma)-Malignancies.html">
 									<li data-aos="zoom-out" class="aos-init">Skin &amp; Soft tissue (Sarcoma)
 										Malignancies</li>
 								</a><br />
 								<a href="./Tendon-and-nerve-Injuries.html">
 									<li data-aos="zoom-out" class="aos-init">Tendon and Nerve Injuries</li>
-								</a><br />
+								</a><br /> -->
 							</ul>
 							<div class="slide-btn">
 								<a href="services.html#PlasticReconstructiveProblems" class="btn link-inside btn-cont"
 									data-animation="fadeInUp" data-animation-delay="2s">
-									<i class="icon-right-arrow"></i><span>Know more</span><i
+									<i class="icon-right-arrow"></i><span>Explore Reconstructive Procedures</span><i
 										class="icon-right-arrow"></i>
 								</a>
 							</div>
