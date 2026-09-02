@@ -125,6 +125,223 @@
 
 
 
+
+<style>
+/* =========================================================
+   DR. SUBHASH FAQ SECTION
+   Screenshot-style responsive FAQ
+   Styling is kept here in index.php <head>
+   ========================================================= */
+
+.subhash_faq_section {
+    padding: 65px 0 70px;
+    background: linear-gradient(45deg,  #ba822c 0%,#ffee9a 43%,#ba822c 100%);
+}
+
+.subhash_faq_wrapper {
+    width: 100%;
+}
+
+/* Center heading like reference screenshot */
+.subhash_faq_heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.subhash_faq_main_title {
+    margin: 0;
+    color: #111111;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subhash_faq_main_title span {
+    color: #111111;
+    font-weight: 700;
+}
+
+/* Two equal Bootstrap columns on desktop/tablet */
+.subhash_faq_grid {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.subhash_faq_grid > [class*="col-"] {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.subhash_faq_column {
+    width: 100%;
+}
+
+/* Individual FAQ rows */
+.subhash_faq_item {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.subhash_faq_question_row {
+    width: 100%;
+    min-height: 104px;
+    padding: 22px 5px 22px 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.subhash_faq_question_row:hover,
+.subhash_faq_question_row:focus,
+.subhash_faq_question_row:active {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.subhash_faq_question {
+    flex: 1;
+    margin: 0;
+    color: #111111;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+/* Simple + / - like screenshot: no circle */
+.subhash_faq_toggle {
+    flex: 0 0 auto;
+    min-width: 22px;
+    color: #111111;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Accordion answer */
+.subhash_faq_answer {
+    display: none;
+    padding: 0 42px 22px 5px;
+}
+
+.subhash_faq_item.active .subhash_faq_answer {
+    display: block;
+}
+
+.subhash_faq_answer p {
+    margin: 0;
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+/* Laptop / tablet */
+@media (max-width: 1199px) {
+    .subhash_faq_main_title {
+        font-size: 36px;
+    }
+
+    .subhash_faq_grid {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+
+    .subhash_faq_grid > [class*="col-"] {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .subhash_faq_question {
+        font-size: 18px;
+    }
+
+    .subhash_faq_question_row {
+        min-height: 96px;
+        gap: 18px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .subhash_faq_section {
+        padding: 50px 0 55px;
+    }
+
+    .subhash_faq_main_title {
+        font-size: 32px;
+    }
+
+    .subhash_faq_heading {
+        margin-bottom: 25px;
+    }
+
+    .subhash_faq_question {
+        font-size: 17px;
+    }
+
+    .subhash_faq_question_row {
+        min-height: 92px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+/* Mobile: stack into one column */
+@media (max-width: 767px) {
+    .subhash_faq_section {
+        padding: 40px 0 45px;
+    }
+
+    .subhash_faq_main_title {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .subhash_faq_grid {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .subhash_faq_grid > [class*="col-"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .subhash_faq_question_row {
+        min-height: auto;
+        padding: 18px 0;
+        gap: 15px;
+    }
+
+    .subhash_faq_question {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .subhash_faq_toggle {
+        font-size: 24px;
+    }
+
+    .subhash_faq_answer {
+        padding: 0 30px 18px 0;
+    }
+
+    .subhash_faq_answer p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+</style>
+
 </head>
 
 <body class="shop-page layout-landing">
@@ -753,14 +970,28 @@
 					<div class="title-wrap text-center mt-2">
 						<!-- <h2 class="h1">One stop for all Surgery Needs</h2> -->
 
-						<h2 class="h1">One stop for all Your cosmetic Needs</h2>
+						<h1 style="white-space: nowrap; margin-right: 60px; font-size: 28px;" >
+    Dr. Subhash Pentapati Plastic, Cosmetic & Reconstructive Surgeon in Kakinada
+</h1>
 
-						<div class="h-decor"></div>
-					</div>
-					<p>Dr. Subhash Center for Plastic Surgery is established in the heart of Kakinada smart city with an idea to deliver exceptional care and treatment to the patients through a range of plastic, cosmetic and reconstructive surgeries. With expertise in the specialty of problem solving we are dedicated in improving patient's quality of life and addressing a wide range of problems (from new born to elderly.. from hair to toe..) The best possible results for patient's aesthetic needs will be provided. With the help of software patients can have an overview of the post operative results at the time of consultation. Consultations are provided in a safe, hygienic, well equipped place located in bhanugudi center, beside padma priya theatre, Kakinada</p>
+<h6>
+    Advanced plastic, cosmetic and reconstructive surgical care with a patient-focused approach.
+</h6>
+
+<div class="h-decor"></div>
+
+<p style="font-size: 18px; text-align: justify; margin: 20px 0 0 0; width: 100%; max-width: none;">
+Dr. Subhash Center for Plastic Surgery is a specialized center in Kakinada providing comprehensive care for cosmetic, plastic and reconstructive surgical needs. Dr. Subhash Pentapati, a qualified Plastic, Cosmetic & Reconstructive Surgeon, provides personalized treatment based on each patient's concerns, clinical condition, anatomy and individual goals.
+
+The center offers care across a wide range of conditions and procedures, from facial and body contouring procedures to breast surgery, hair restoration, burn reconstruction, hand surgery, trauma reconstruction and microsurgical procedures.
+
+With advanced treatment-planning technology, patients can also gain a better understanding of potential surgical outcomes during consultation, where appropriate.
+
+Located in Bhanugudi Center, Kakinada, the center focuses on providing a safe, hygienic and well-equipped environment for consultation and treatment.
+</p>
 
 					<div class="title-wrap text-center mt-4">
-						<h2 class="h1">Know about Doctors</h2>
+						<h2 class="h1">Meet Dr. Subhash Pentapati</h2>
 						<div class="h-decor mb-2"></div>
 					</div>
 
@@ -771,15 +1002,15 @@
 							<div class="title-wrap text-center text-md-left">
 
 								<!-- <h1 class="h1">Know about your <span class="theme-color"> Doctor</span></h1> -->
-								<div class="h-sub">9 Years of Medical Experience</div>
+								<div class="h-sub" >Plastic, Cosmetic & Reconstructive Surgeon in Kakinada</div>
 							</div>
-							<div class="pr-xl-1">
-								<p>Dr. Subhash Pentapati’s expertise in numerous Cosmetic and Reconstructive procedures
-									has helped many patients receive the best quality care. Having completed M.Ch
-									(Plastic Surgery) from Andhra Medical College and King George Hospital,
-									Visakhapatnam in 2019; he did Fellowship in Microsurgery from Tata Medical Center,
-									Kolkata </p>
-								<ul class="marker-list-md">
+							<div class="pr-xl-1 text-left" >
+								<p >Dr. Subhash Pentapati is a Plastic, Cosmetic & Reconstructive Surgeon providing comprehensive surgical care in Kakinada. With 9 years of medical experience, he has developed expertise across a broad range of cosmetic and reconstructive procedures.
+
+He completed his M.Ch. in Plastic Surgery from Andhra Medical College and King George Hospital, Visakhapatnam, in 2019, followed by specialized Fellowship training in Microsurgery (Oncoplastic Surgery) at Tata Medical Center, Kolkata.
+
+His academic training and specialized fellowship have provided a strong foundation in plastic surgery, reconstructive surgery, microsurgery and oncoplastic surgery, allowing him to approach each patient's treatment based on their individual clinical needs and goals.</p>
+								<ul class="marker-list-md text-left">
 									<li>M.B.B.S from GSL Medical College, Rajahmundry, Andhra Pradesh</li>
 									<li>M.S (General Surgery) from MIMS, Vizianagaram, Andhra Pradesh</li>
 									<li>M.Ch (Plastic Surgery) from Andhra Medical College and King George Hospital,
@@ -821,9 +1052,14 @@
 						</div>
 					</div>
 
-
+<div style="text-align: left; margin-top: 20px;">
+    <a href="about.html" class="btn"
+       style="background: transparent; border: none; box-shadow: none; padding-left: 0; color: inherit; font-weight: 700; font-size:16px">
+        Know More About Dr. Subhash →
+    </a>
+</div>
 					<div class="title-wrap text-center mt-4 mb-3">
-						<h2 class="h1">Cosmetic Gynecology Available</h2>
+						<h2 class="h1">Cosmetic Gynecology & Aesthetic Treatments</h2>
 						<!-- <div class="h-decor"></div> -->
 					</div>
 
@@ -881,22 +1117,21 @@
 						<div class="col-lg-6 col-sm-12 col-md-6">
 							<div class="title-wrap">
 								<!-- <div class="h-sub theme-color">See the Difference</div> -->
-								<h1 class="h1" data-title="Why Choose Us?"><span>Why Choose Us?</span></h1>
+								<h1 class="h1" data-title="Why Choose Us?"><span>Why Choose Dr. Subhash?</span></h1>
 							</div>
 							<div class="mt-2 mt-lg-4"></div>
 							<ul class="numbered-list-xl">
 								<li data-num='01.'>
-									<h5>Patient-Centred</h5>
-									From newborn to elderly, from hair to toe, we provide comprehensive care for every stage of life and every part of your body
+									<h5>Specialized Training</h5>
+									Dr. Subhash Pentapati is an M.Ch. Plastic Surgery qualified surgeon with specialized fellowship training in Microsurgery and Oncoplastic Surgery.
 								</li>
 								<li data-num='02.'>
-									<h5>Comprehensive</h5>
-									We offer comprehensive plastic surgery services, focusing on the whole person, at all ages and stages of life
+									<h5>Cosmetic & Reconstructive</h5>
+									We provide comprehensive cosmetic, plastic and reconstructive surgical care for a wide range of aesthetic, functional and reconstructive concerns.
 								</li>
 								<li data-num='03.'>
-									<h5>Flexible Scheduling</h5>
-									We have flexible hours and are open on certain evenings and during the weekend, to
-									accommodate your schedule.
+									<h5>Patient-Focused Care</h5>
+									Every treatment plan is tailored to the patient's individual condition, needs and goals, with clear communication throughout the treatment journey.
 								</li>
 							</ul>
 
@@ -1172,92 +1407,224 @@
 					</div>
 				</div>
 
-				<div class="container">
-					<div class="row">
+				    <div class="container">
+        <div class="row">
 
-						<?php
-						include './db.connection/db_connection.php';
+            <?php
 
-						// Fetch latest 3 blogs with video
-						$sql = "SELECT id, title, main_content, main_image, video FROM blogs ORDER BY created_at DESC LIMIT 3";
-						$result = $conn->query($sql);
+            include_once './db.connection/db_connection.php';
 
-						if ($result->num_rows > 0) {
-							echo "<div class='row'>"; // Start row for card layout
+            // Check database connection before running query
+            if ($conn instanceof mysqli && !$conn->connect_errno) {
 
-							while ($row = $result->fetch_assoc()) {
-								$blog_id = $row['id'];
-								$title = $row['title'];
-								$main_content = $row['main_content'];
-								$main_image = $row['main_image'];
-								$video = $row['video'];
+                // Fetch latest 3 blogs
+                $sql = "
+                    SELECT 
+                        id,
+                        title,
+                        main_content,
+                        main_image,
+                        video
+                    FROM blogs
+                    ORDER BY created_at DESC
+                    LIMIT 3
+                ";
 
-								echo "<div class='col-md-4 c mb-4'  >"; // Create 3 equal-width columns for medium devices
-								echo "<div class='card blogs-border h-100'>"; // Start card
-
-								// Display the blog title
-								echo "<div class='card-body'>";
-
-
-								// Display video if available
-								if (!empty($video)) {
-									$video_path = "./admin/uploads/videos/{$video}";
-									echo "<video class='main-video img-fluid' controls>
-                    <source src='{$video_path}' type='video/mp4'>
-                    Your browser does not support the video tag.
-                  </video>";
-								}
-								// If no video, display main image
-								elseif (!empty($main_image)) {
-									$main_image_path = "./admin/uploads/photos/{$main_image}";
-									echo "<img class='card-img-top img-fluid' src='{$main_image_path}' alt='Blog Image'>";
-								}
-								echo "<h5 class='card-title my-3'>" . htmlspecialchars($title) . "</h5>";
-								// Display a short portion of the blog content
-								echo "<p class='card-text'>" . substr($main_content, 0, 90) . "...</p>";
-
-								// Link to full blog post
-								echo "<a href='fullblog.php?id={$blog_id}' class='btn btn-primary'>Read more</a>";
-
-								echo "</div>"; // End card body
-								echo "</div>"; // End card
-								echo "</div>"; // End column
-							}
-
-							echo "</div>"; // End row
-						} else {
-							echo "No blog posts found.";
-						}
-
-						$conn->close();
-						?>
+                $result = $conn->query($sql);
 
 
+                if ($result && $result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+
+                        $blog_id = $row['id'];
+                        $title = $row['title'];
+                        $main_content = $row['main_content'];
+                        $main_image = $row['main_image'];
+                        $video = $row['video'];
+
+                        // Remove HTML tags before creating short description
+                        $clean_content = strip_tags($main_content);
+
+                        $short_content = substr($clean_content, 0, 90);
+
+                        ?>
+
+                        <div class="col-md-4 c mb-4">
+
+                            <div class="card blogs-border h-100">
+
+                                <div class="card-body">
+
+                                    <?php
+
+                                    // Show video if available
+                                    if (!empty($video)) {
+
+                                        $video_path =
+                                            "./admin/uploads/videos/" .
+                                            htmlspecialchars(
+                                                $video,
+                                                ENT_QUOTES,
+                                                'UTF-8'
+                                            );
+
+                                        ?>
+
+                                        <video class="main-video img-fluid" controls>
+
+                                            <source
+                                                src="<?php echo $video_path; ?>"
+                                                type="video/mp4"
+                                            >
+
+                                            Your browser does not support the video tag.
+
+                                        </video>
+
+                                        <?php
+
+                                    }
+
+                                    // Otherwise show image
+                                    elseif (!empty($main_image)) {
+
+                                        $main_image_path =
+                                            "./admin/uploads/photos/" .
+                                            htmlspecialchars(
+                                                $main_image,
+                                                ENT_QUOTES,
+                                                'UTF-8'
+                                            );
+
+                                        ?>
+
+                                        <img
+                                            class="card-img-top img-fluid"
+                                            src="<?php echo $main_image_path; ?>"
+                                            alt="<?php echo htmlspecialchars(
+                                                $title,
+                                                ENT_QUOTES,
+                                                'UTF-8'
+                                            ); ?>"
+                                        >
+
+                                        <?php
+                                    }
+                                    ?>
 
 
+                                    <h5 class="card-title my-3">
+
+                                        <?php
+                                        echo htmlspecialchars(
+                                            $title,
+                                            ENT_QUOTES,
+                                            'UTF-8'
+                                        );
+                                        ?>
+
+                                    </h5>
 
 
+                                    <p class="card-text">
+
+                                        <?php
+                                        echo htmlspecialchars(
+                                            $short_content,
+                                            ENT_QUOTES,
+                                            'UTF-8'
+                                        );
+                                        ?>...
+
+                                    </p>
 
 
+                                    <a
+                                        href="fullblog.php?id=<?php echo (int)$blog_id; ?>"
+                                        class="btn btn-primary"
+                                    >
+                                        Read more
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <?php
+                    }
+
+                } else {
+
+                    ?>
+
+                    <div class="col-12 text-center">
+
+                        <p>
+                            No blog posts found.
+                        </p>
+
+                    </div>
+
+                    <?php
+                }
+
+            } else {
+
+                /*
+                 Database is currently unavailable.
+
+                 IMPORTANT:
+                 We do NOT use die() here because we want
+                 the remaining Index page and footer to load.
+                */
+
+                ?>
+
+                <div class="col-12 text-center">
+
+                    <p style="color:#777;">
+                        Blogs are temporarily unavailable.
+                    </p>
+
+                </div>
+
+                <?php
+            }
 
 
-						<!-- <div class="mt-5 d-none d-md-block">
-                         <a href="blogs.php" style="text-decoration: none;">
-                             <p class="view_more_btn mb-5 d-flex flex-row justify-content-start">View More<i
-                                     class="fa-solid fa-arrow-right mt-1"></i></p>
-                         </a>
-                     </div> -->
+            // Close connection only when it exists
+            if ($conn instanceof mysqli) {
 
-						<div class="d-flex flex-row justify-content-center mt-4">
-							<a href="blogs.php" style="text-decoration: none;">
-								<p class="view_more_btn d-md-none">View More<i class="fa-solid fa-arrow-right"></i></p>
-							</a>
-						</div>
+                $conn->close();
+            }
 
-					</div>
-				</div>
+            ?>
 
-			</section>
+        </div>
+
+
+        <div class="d-flex flex-row justify-content-center mt-4">
+
+            <a href="blogs.php" style="text-decoration:none;">
+
+                <p class="view_more_btn d-md-none">
+
+                    View More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -1503,7 +1870,210 @@
 				</div>
 			</section>
 
+
 			<!-- //  Ending   Get in touch section -->
+
+
+
+			<section class="subhash_faq_section">
+				<div class="container">
+
+					<div class="subhash_faq_wrapper">
+
+						<!-- FAQ HEADING -->
+						<div class="subhash_faq_heading">
+							<h2 class="subhash_faq_main_title">
+								Frequently Asked <span>Questions (FAQ)</span>
+							</h2>
+						</div>
+
+						<!--
+							Desktop / 1400px: 2 columns, 4 FAQs on each side
+							Tablet: 2 columns
+							Mobile: 1 column
+						-->
+						<div class="row subhash_faq_grid">
+
+							<!-- LEFT COLUMN -->
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="subhash_faq_column">
+
+									<!-- FAQ 1 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												Who is Dr. Subhash Pentapati?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Dr. Subhash Pentapati is a Plastic, Cosmetic &amp; Reconstructive Surgeon in Kakinada. He holds an M.Ch. in Plastic Surgery from Andhra Medical College &amp; King George Hospital, Visakhapatnam, and has completed Fellowship training in Microsurgery (Oncoplastic Surgery) at Tata Medical Center, Kolkata.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 2 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												What treatments does Dr. Subhash provide?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Dr. Subhash provides cosmetic, plastic and reconstructive surgical care for a range of concerns. Treatments include rhinoplasty, gynecomastia surgery, breast surgery, liposuction, abdominoplasty, hair restoration, scar revision, burn reconstruction, hand surgery and other reconstructive procedures.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 3 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												What is the difference between cosmetic and reconstructive plastic surgery?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Cosmetic surgery primarily focuses on improving or changing appearance, while reconstructive plastic surgery focuses on restoring form and function affected by injuries, burns, congenital conditions, disease or other medical problems. Plastic surgery can include both cosmetic and reconstructive care.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 4 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												What cosmetic surgery procedures are available in Kakinada?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Cosmetic procedures available through Dr. Subhash's practice include rhinoplasty, gynecomastia surgery, breast augmentation, breast reduction, breast lift, liposuction, abdominoplasty, scar revision and other aesthetic procedures. Suitability depends on individual health, anatomy and treatment goals.
+											</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- RIGHT COLUMN -->
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="subhash_faq_column">
+
+									<!-- FAQ 5 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												Does Dr. Subhash treat reconstructive and trauma-related conditions?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Yes. Reconstructive care may include treatment for burn injuries, scars and contractures, crush injuries, hand injuries, nerve and tendon injuries, chronic wounds, congenital deformities and other conditions requiring restoration of appearance or function.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 6 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												Is hair transplantation or hair restoration available at Dr. Subhash Center for Plastic Surgery?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												Hair restoration treatments are available, and the appropriate approach depends on the cause and pattern of hair loss. During consultation, the condition of the scalp and available donor hair can be assessed before discussing suitable treatment options.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 7 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												How do I choose the right plastic surgery treatment for my condition?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												The appropriate procedure depends on your medical history, anatomy, specific concern, expected outcome and overall health. A consultation with a qualified plastic surgeon allows these factors to be evaluated and helps determine whether surgical or non-surgical treatment is appropriate.
+											</p>
+										</div>
+									</div>
+
+									<!-- FAQ 8 -->
+									<div class="subhash_faq_item">
+										<button type="button"
+											class="subhash_faq_question_row"
+											aria-expanded="false">
+
+											<span class="subhash_faq_question">
+												Where can I consult a plastic surgeon in Kakinada?
+											</span>
+
+											<span class="subhash_faq_toggle">+</span>
+										</button>
+
+										<div class="subhash_faq_answer">
+											<p>
+												You can consult Dr. Subhash Pentapati, Plastic, Cosmetic &amp; Reconstructive Surgeon, at Dr. Subhash Center for Plastic Surgery in Kakinada, Andhra Pradesh. Contact the center to confirm consultation timings and appointment availability.
+											</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
 			<hr>
 
 
@@ -1601,7 +2171,7 @@
 
 
 
-
+                       
 
 
 
@@ -1804,6 +2374,31 @@
 							var x = document.getElementsByTagName('script')[0];
 							x.parentNode.insertBefore(s, x);
 						</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const faqButtons = document.querySelectorAll(".subhash_faq_question_row");
+
+    faqButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const faqItem = this.closest(".subhash_faq_item");
+            const faqIcon = this.querySelector(".subhash_faq_toggle");
+            const isOpen = faqItem.classList.contains("active");
+
+            if (isOpen) {
+                faqItem.classList.remove("active");
+                faqIcon.textContent = "+";
+                this.setAttribute("aria-expanded", "false");
+            } else {
+                faqItem.classList.add("active");
+                faqIcon.textContent = "−";
+                this.setAttribute("aria-expanded", "true");
+            }
+        });
+    });
+});
+</script>
 
 						<!-- Vendors -->
 						<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
