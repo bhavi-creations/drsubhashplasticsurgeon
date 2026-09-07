@@ -421,8 +421,8 @@
 										</li>
 										<!-- <li class="nav-item">
 										<a class="nav-link link-inside" href="appointment.html" target="_blank"  class="btn btn-xs btn-gradient">Book Appointment</a>
-									</li>
-										<li> -->
+									</li>-->
+										<li>
 										<a href="appointment.html"
 											target="_blank"
 											class="btn btn-xs btn-gradient pb-1 pt-1 "></i><span>Book
