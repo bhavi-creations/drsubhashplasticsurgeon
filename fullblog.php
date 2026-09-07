@@ -175,7 +175,7 @@ $conn->close();
 										<a class="nav-link link-inside" href="./gallery.html">Gallery</a>
 									</li>
 									<!-- <li class="nav-item">
-										<a class="nav-link link-inside" href="https://rinasolutions.in/doctors/kakinada/doctor-details.php?tid=17" target="_blank">Book Appointment</a>
+										<a class="nav-link link-inside" href="appointment.html" target="_blank">Book Appointment</a>
 									</li> -->
 									<li class="nav-item">
 										<a class="nav-link link-inside" href="./contact.html">Contact</a>
@@ -187,7 +187,7 @@ $conn->close();
 										<a class="nav-link link-inside" href="machenary.html">Machinery</a>
 									</li>
 									<li class="nav-item">  
-										<a href="https://rinasolutions.in/doctors/kakinada/doctor-details.php?tid=17" target="_blank" class="btn btn-xs btn-gradient pb-1 pt-1 "></i><span>Book Appointment</span></i></a>
+										<a href="appointment.html" target="_blank" class="btn btn-xs btn-gradient pb-1 pt-1 "></i><span>Book Appointment</span></i></a>
 									</li>
 								</ul>
 							</div>
