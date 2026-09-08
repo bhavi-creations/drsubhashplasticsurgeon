@@ -272,6 +272,110 @@
 
         }
 
+        /* =========================
+           APPOINTMENT SUCCESS / ERROR
+        ========================== */
+
+        .appointment-success-message {
+            min-height: 540px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .success-check {
+            width: 78px;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ba822c, #ffee9a);
+            color: #111111;
+            font-size: 38px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .appointment-success-message h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            color: #111111;
+            margin: 0 0 10px;
+            font-weight: 700;
+        }
+
+        .appointment-success-message h4 {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #ba822c;
+            margin: 0 0 20px;
+            font-weight: 600;
+        }
+
+        .appointment-success-message p {
+            max-width: 480px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555555;
+            margin: 0 0 8px;
+        }
+
+        .book-another-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ba822c, #d6a94d, #ffee9a);
+            color: #111111;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .book-another-btn:hover {
+            color: #111111;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .appointment-error-message {
+            display: none;
+            margin-bottom: 25px;
+            padding: 15px 18px;
+            border-radius: 10px;
+            background: #fff1ef;
+            border: 1px solid #e8bab4;
+            color: #a6372a;
+            font-size: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .appointment-success-message {
+                min-height: 430px;
+                padding: 30px 15px;
+            }
+
+            .appointment-success-message h2 {
+                font-size: 31px;
+            }
+
+            .appointment-success-message h4 {
+                font-size: 18px;
+            }
+
+            .success-check {
+                width: 68px;
+                height: 68px;
+                font-size: 32px;
+            }
+        }
+
     </style>
 
 </head>
@@ -595,7 +699,40 @@
 
             <div class="subhash_appointment_form_card">
 
-                <form action="#" method="post">
+                <!-- SUCCESS MESSAGE -->
+                <div id="appointmentSuccess" class="appointment-success-message">
+
+                    <div class="success-check">&#10003;</div>
+
+                    <h2>Thank You!</h2>
+
+                    <h4>Your Appointment Request Has Been Submitted</h4>
+
+                    <p>
+                        Thank you for contacting
+                        <strong>Dr. Subhash Center for Plastic Surgery.</strong>
+                    </p>
+
+                    <p>
+                        We have received your appointment request.
+                        Our team will contact you shortly to confirm your appointment.
+                    </p>
+
+                    <a href="appointment.html" class="book-another-btn">
+                        Book Another Appointment
+                    </a>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+                <div id="appointmentError" class="appointment-error-message">
+                    Unable to send your appointment request. Please try again.
+                </div>
+
+
+                <!-- APPOINTMENT FORM -->
+                <form action="appointmentform.php" method="POST" id="appointmentForm">
 
                     <div class="row">
 
@@ -1193,6 +1330,43 @@
 
 <script src="form/forms.js"></script>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const success = params.get("success");
+    const error = params.get("error");
+
+    const form = document.getElementById("appointmentForm");
+    const successMessage = document.getElementById("appointmentSuccess");
+    const errorMessage = document.getElementById("appointmentError");
+
+    if (success === "1" && form && successMessage) {
+
+        form.style.display = "none";
+        successMessage.style.display = "flex";
+
+        successMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+    if (error === "1" && errorMessage) {
+
+        errorMessage.style.display = "block";
+
+        errorMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+});
+</script>
 
 </body>
 

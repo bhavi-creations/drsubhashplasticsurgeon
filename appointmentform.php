@@ -6,9 +6,9 @@ use PHPMailer\PHPMailer\Exception;
 require 'mailer/vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    exit('Access Denied');
+    header('Location: appointment.html');
+    exit;
 }
-
 
 /* =========================
    GET FORM DATA
@@ -21,7 +21,6 @@ $date = trim($_POST['appointment_date'] ?? '');
 $time = trim($_POST['appointment_time'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
-
 /* =========================
    VALIDATION
 ========================= */
@@ -33,9 +32,36 @@ if (
     empty($date) ||
     empty($time)
 ) {
-    exit('Please fill all required fields.');
+    header('Location: appointment.html?error=1');
+    exit;
 }
 
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header('Location: appointment.html?error=1');
+    exit;
+}
+
+/* =========================
+   FORMAT DATE
+========================= */
+
+$formattedDate = $date;
+$dateObject = DateTime::createFromFormat('Y-m-d', $date);
+
+if ($dateObject) {
+    $formattedDate = $dateObject->format('d-m-Y');
+}
+
+/* =========================
+   SAFE VALUES FOR EMAIL
+========================= */
+
+$safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+$safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+$safePhone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
+$safeDate = htmlspecialchars($formattedDate, ENT_QUOTES, 'UTF-8');
+$safeTime = htmlspecialchars($time, ENT_QUOTES, 'UTF-8');
+$safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
 
 /* =========================
    PHPMailer
@@ -50,19 +76,19 @@ try {
     ========================= */
 
     $mail->isSMTP();
-
     $mail->Host = 'smtp.gmail.com';
-
     $mail->SMTPAuth = true;
-
     $mail->Username = 'sairampachipala00@gmail.com';
 
+    /*
+       Create a NEW Google App Password and paste it below.
+       Do not use your normal Gmail password.
+    */
     $mail->Password = 'hetpnbxyctpodhkv';
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-
     $mail->Port = 587;
-
+    $mail->CharSet = 'UTF-8';
 
     /* =========================
        SENDER
@@ -70,9 +96,8 @@ try {
 
     $mail->setFrom(
         'sairampachipala00@gmail.com',
-        'Dr. Subhash Center for Plastic Surgery'
+        'Dr. Subhash'
     );
-
 
     /* =========================
        RECEIVER
@@ -80,9 +105,8 @@ try {
 
     $mail->addAddress(
         'sairampachipala00@gmail.com',
-        'Dr. Subhash Center for Plastic Surgery'
+        'Dr. Subhash'
     );
-
 
     /* =========================
        REPLY TO PATIENT
@@ -93,52 +117,132 @@ try {
         $name
     );
 
-
     /* =========================
        EMAIL
     ========================= */
 
     $mail->isHTML(true);
+    $mail->Subject = 'New Appointment Form Submission';
 
-    $mail->Subject = 'New Appointment Request - Dr. Subhash';
+    /* =========================
+       EMAIL BODY
+    ========================= */
 
+    $mail->Body = '
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
 
-    $mail->Body = "
+    <body style="
+        margin:0;
+        padding:30px 15px;
+        background:#f5efe6;
+        font-family:Arial, Helvetica, sans-serif;
+        color:#191919;
+    ">
 
-        <h2>New Appointment Request</h2>
+        <div style="
+            max-width:620px;
+            margin:0 auto;
+            background:#ffffff;
+            border-radius:16px;
+            overflow:hidden;
+            box-shadow:0 8px 30px rgba(73,45,22,0.12);
+        ">
 
-        <p>
-            <strong>Patient Name:</strong>
-            " . htmlspecialchars($name) . "
-        </p>
+            <div style="
+                background:linear-gradient(110deg, #ba822c, #ffee9a, #ba822c);
+                padding:28px 35px;
+            ">
 
-        <p>
-            <strong>Email:</strong>
-            " . htmlspecialchars($email) . "
-        </p>
+                <div style="
+                    font-size:13px;
+                    letter-spacing:2px;
+                    color:#5a3519;
+                    margin-bottom:7px;
+                ">
+                    DR. SUBHASH
+                </div>
 
-        <p>
-            <strong>Contact Number:</strong>
-            " . htmlspecialchars($phone) . "
-        </p>
+                <div style="
+                    font-size:28px;
+                    line-height:1.2;
+                    font-weight:700;
+                    color:#18120e;
+                ">
+                    New Appointment
+                </div>
 
-        <p>
-            <strong>Appointment Date:</strong>
-            " . htmlspecialchars($date) . "
-        </p>
+            </div>
 
-        <p>
-            <strong>Appointment Time:</strong>
-            " . htmlspecialchars($time) . "
-        </p>
+            <div style="padding:34px 35px;">
 
-        <p>
-            <strong>Message:</strong><br>
-            " . nl2br(htmlspecialchars($message)) . "
-        </p>
+                <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse; font-size:17px;">
 
-    ";
+                    <tr>
+                        <td style="padding:13px 0; width:145px; font-weight:700; color:#332215;">Name:</td>
+                        <td style="padding:13px 0; color:#242424;">'.$safeName.'</td>
+                    </tr>
 
+                    <tr>
+                        <td style="padding:13px 0; font-weight:700; color:#332215;">Phone:</td>
+                        <td style="padding:13px 0; color:#242424;">'.$safePhone.'</td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:13px 0; font-weight:700; color:#332215;">Email:</td>
+                        <td style="padding:13px 0;">
+                            <a href="mailto:'.$safeEmail.'" style="color:#a56b36; text-decoration:none;">'.$safeEmail.'</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:13px 0; font-weight:700; color:#332215;">Date:</td>
+                        <td style="padding:13px 0; color:#242424;">'.$safeDate.'</td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:13px 0; font-weight:700; color:#332215;">Time Slot:</td>
+                        <td style="padding:13px 0; color:#242424;">'.$safeTime.'</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="padding-top:22px;">
+                            <div style="font-weight:700; margin-bottom:10px; color:#332215;">Message:</div>
+                            <div style="background:#f8f3ed; border-left:4px solid #ba822c; border-radius:7px; padding:16px; line-height:1.6; color:#333333;">
+                                '.($safeMessage !== '' ? $safeMessage : 'No additional message.').'
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div style="padding:18px 35px; background:#f8f3ed; color:#82664f; font-size:13px; text-align:center;">
+                Appointment enquiry submitted through Dr. Subhash website
+            </div>
+
+        </div>
+
+    </body>
+    </html>
+    ';
+
+    /* =========================
+       PLAIN TEXT FALLBACK
+    ========================= */
+
+    $mail->AltBody =
+        "New Appointment\n\n" .
+        "Name: " . $name . "\n" .
+        "Phone: " . $phone . "\n" .
+        "Email: " . $email . "\n" .
+        "Date: " . $formattedDate . "\n" .
+        "Time Slot: " . $time . "\n" .
+        "Message: " . $message;
 
     /* =========================
        SEND
@@ -146,34 +250,21 @@ try {
 
     $mail->send();
 
-
     /* =========================
        SUCCESS
     ========================= */
 
-    echo "
-    <script>
-
-        alert('Your appointment request has been sent successfully.');
-
-        window.location.href = 'appointment.html';
-
-    </script>
-    ";
-
+    header('Location: appointment.html?success=1');
+    exit;
 
 } catch (Exception $e) {
 
-    echo "
-    <script>
+    /* =========================
+       ERROR
+    ========================= */
 
-        alert('Unable to send appointment request. Please try again.');
-
-        window.location.href = 'appointment.html';
-
-    </script>
-    ";
-
+    header('Location: appointment.html?error=1');
+    exit;
 }
 
 ?>
